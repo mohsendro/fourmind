@@ -19,10 +19,12 @@ require_once plugin_dir_path(__FILE__) . 'functions/snippets/theme.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/wp-rewrite-rules.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/optimize.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/enqueue.php';
+require_once plugin_dir_path(__FILE__) . 'functions/snippets/image-size.php';
 
 // Post Types
 require_once plugin_dir_path(__FILE__) . 'functions/posttype/page.php';
 require_once plugin_dir_path(__FILE__) . 'functions/posttype/post.php';
+require_once plugin_dir_path(__FILE__) . 'functions/posttype/workshop.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/posttype/posttypesample.php';
 
 // Taxonomies
@@ -31,6 +33,7 @@ require_once plugin_dir_path(__FILE__) . 'functions/posttype/post.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/taxonomy/taxonomysample.php';
 
 // Meta Boxes
+require_once plugin_dir_path(__FILE__) . 'functions/metabox/metaboxworkshop.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/metabox/metaboxsample.php';
 
 // Resource
@@ -43,6 +46,7 @@ require_once plugin_dir_path(__FILE__) . 'functions/posttype/post.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/table/tablesample.php';
 
 // Columns
+require_once plugin_dir_path(__FILE__) . 'functions/column/columnworkshop.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/column/columnsample.php';
 
 // Roles

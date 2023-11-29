@@ -1,0 +1,268 @@
+/* Register Font Family */
+@font-face {
+    font-family: 'YekanBakh';
+    src: url('../font/yekan-bakh/eot/YekanBakh-Regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/yekan-bakh/eot/YekanBakh-Regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/yekan-bakh/woff2/YekanBakh-Regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/yekan-bakh/woff/YekanBakh-Regular.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/yekan-bakh/ttf/YekanBakh-Regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/yekan-bakh/svg/YekanBakh-Regular.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    src: url('../font/yekan-bakh/eot/YekanBakh-Regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/yekan-bakh/eot/YekanBakh-Regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/yekan-bakh/woff2/YekanBakh-Regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/yekan-bakh/woff/YekanBakh-Regular.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/yekan-bakh/ttf/YekanBakh-Regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/yekan-bakh/svg/YekanBakh-Regular.svg#svgFontName') format('svg');
+    /*Legacy iOS */
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    src: url('../font/yekan-bakh/eot/YekanBakh-Regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/yekan-bakh/eot/YekanBakh-Regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/yekan-bakh/woff2/YekanBakh-Regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/yekan-bakh/woff/YekanBakh-Regular.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/yekan-bakh/ttf/YekanBakh-Regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/yekan-bakh/svg/YekanBakh-Regular.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    src: url('../font/yekan-bakh/eot/YekanBakh-Regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/yekan-bakh/eot/YekanBakh-Regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/yekan-bakh/woff2/YekanBakh-Regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/yekan-bakh/woff/YekanBakh-Regular.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/yekan-bakh/ttf/YekanBakh-Regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/yekan-bakh/svg/YekanBakh-Regular.svg#svgFontName') format('svg');
+    /*Legacy iOS */
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    src: url('../font/yekan-bakh/eot/YekanBakh-Bold.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/yekan-bakh/eot/YekanBakh-Bold.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/yekan-bakh/woff2/YekanBakh-Bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/yekan-bakh/woff/YekanBakh-Bold.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/yekan-bakh/ttf/YekanBakh-Bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/yekan-bakh/svg/YekanBakh-Bold.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    src: url('../font/yekan-bakh/eot/YekanBakh-Bold.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/yekan-bakh/eot/YekanBakh-Bold.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/yekan-bakh/woff2/YekanBakh-Bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/yekan-bakh/woff/YekanBakh-Bold.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/yekan-bakh/ttf/YekanBakh-Bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/yekan-bakh/svg/YekanBakh-Bold.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('../font/Kalameh/eot/KalamehWeb_thin.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/Kalameh/eot/KalamehWeb_thin.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/Kalameh/woff2/KalamehWeb_thin.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/Kalameh/woff/KalamehWeb_thin.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/Kalameh/ttf/KalamehWeb_thin.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/Kalameh/svg/KalamehWeb_thin.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('../font/Kalameh/eot/KalamehWeb_thin.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/Kalameh/eot/KalamehWeb_thin.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/Kalameh/woff2/KalamehWeb_thin.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/Kalameh/woff/KalamehWeb_thin.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/Kalameh/ttf/KalamehWeb_thin.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/Kalameh/svg/KalamehWeb_thin.svg#svgFontName') format('svg');
+    /*Legacy iOS */
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('../font/Kalameh/eot/KalamehWeb_Regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/Kalameh/eot/KalamehWeb_Regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/Kalameh/woff2/KalamehWeb_Regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/Kalameh/woff/KalamehWeb_Regular.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/Kalameh/ttf/KalamehWeb_Regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/Kalameh/svg/KalamehWeb_Regular.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('../font/Kalameh/eot/KalamehWeb_Regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/Kalameh/eot/KalamehWeb_Regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/Kalameh/woff2/KalamehWeb_Regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/Kalameh/woff/KalamehWeb_Regular.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/Kalameh/ttf/KalamehWeb_Regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/Kalameh/svg/KalamehWeb_Regular.svg#svgFontName') format('svg');
+    /*Legacy iOS */
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('../font/Kalameh/eot/KalamehWeb_Bold.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/Kalameh/eot/KalamehWeb_Bold.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/Kalameh/woff2/KalamehWeb_Bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/Kalameh/woff/KalamehWeb_Bold.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/Kalameh/ttf/KalamehWeb_Bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/Kalameh/svg/KalamehWeb_Bold.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('../font/Kalameh/eot/KalamehWeb_Black.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/Kalameh/eot/KalamehWeb_Black.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/Kalameh/woff2/KalamehWeb_Black.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/Kalameh/woff/KalamehWeb_Black.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/Kalameh/ttf/KalamehWeb_Black.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/Kalameh/svg/KalamehWeb_Black.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 900;
+}
+
+/* icons font */
+@font-face {
+    font-family: 'icomoon';
+    src: url("../font/line-awesome/fonts/icomoon.eot?ee9xs1");
+    src: url("../font/line-awesome/fonts/icomoon.eot?ee9xs1#iefix") format("embedded-opentype"),
+        url("../font/line-awesome/fonts/icomoon.ttf?ee9xs1") format("truetype"),
+        url("../font/line-awesome/fonts/icomoon.woff?ee9xs1") format("woff"),
+        url("../font/line-awesome/fonts/icomoon.svg?ee9xs1#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* Kit Styles */
+:root {
+    /* --color-primary: #1D2125;
+    --color-second: #CD9300;
+    --hover-primary: #1D2125;
+    --hover-second: #CD9300;
+     */
+}
+
+/* Global Styles */
+* {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+html {
+    /* font-family: "YekanBakh";
+    font-size: 16px;
+    font-weight: 400; */
+    /* overflow-x: hidden; */
+}
+
+body {
+    /* background-color: #FFFFFF;
+    font-family: "YekanBakh";
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--title-color, #000000);
+    overflow-x: hidden; */
+}
+
+section .row {
+    width: 100%;
+    margin: 0 auto;
+}
+
+section .row-fluid {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-fluid,
+.row,
+.row>* {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}

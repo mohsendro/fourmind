@@ -23,6 +23,7 @@ if( ! class_exists( 'Menus' ) ) {
              'separator1',
              'edit.php?post_type=page',
              'edit.php',
+             'edit.php?post_type=workshop',
              'edit-comments.php',
              'upload.php',
              'separator2',

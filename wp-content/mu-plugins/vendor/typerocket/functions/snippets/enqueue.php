@@ -22,5 +22,5 @@ function wpplus_enqueue_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'wpplus_enqueue_scripts' );
-add_action( 'admin_enqueue_scripts', 'wpplus_enqueue_scripts' );
-add_action( 'enqueue_embed_scripts', 'wpplus_enqueue_scripts' );
+// add_action( 'admin_enqueue_scripts', 'wpplus_enqueue_scripts' );
+// add_action( 'enqueue_embed_scripts', 'wpplus_enqueue_scripts' );
