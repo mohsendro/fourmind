@@ -28,7 +28,9 @@ var swiper = new Swiper(".fourmindSwiper", {
             btnRegister.forEach((e) => {
                 e.addEventListener("click", () => {
                     let courseID = e.getAttribute("data-courseID");
+                    let courseDate = e.getAttribute("data-courseDate");
                     setCourseID(courseID);
+                    setCourseDate(courseDate);
                     swiper.slideNext();
                 });
             });
@@ -118,6 +120,22 @@ let introduceCallback = (url) => {
 let setCourseID = (setCourseID) => {
     let setCourseIDInput = document.querySelector(".form-step-one .course-id");
     setCourseIDInput.value = setCourseID;
+}
+
+let setCourseDate = (setCourseDate) => {
+    var newFormCheck;
+    let setCourseDateInput = document.querySelector(".form-step-one .course-date");
+    // setCourseDateInput.value = setCourseDate;
+
+    arrayFormCheck = setCourseDate.split(",")
+    arrayFormCheck.forEach( (item) => {
+        
+        var div = document.createElement("div");
+        var divElement = div.setAttribute('class', 'form-check');
+
+    });
+    // newFormCheck = setCourseDateInput.replaceWith(divElement);
+    
 }
 
 // Check form-step-one Validation

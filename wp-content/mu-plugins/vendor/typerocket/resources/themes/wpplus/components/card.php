@@ -1,5 +1,22 @@
 <?php if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly. ?>
 
+<?php
+    $sep = 1;
+    $date = '';
+    $count = count($workshop->meta->workshopInfo['meetings']);
+    foreach( $workshop->meta->workshopInfo['meetings'] as $meeting ) {
+        foreach( $meeting as $key => $value) {
+
+            $date .= $value;
+            if( $sep < $count ) {
+                $date .= " ,";
+            }
+
+        }
+        $sep++;
+    }
+?>
+
 <div class="swiper-slide card-slide">
     <?php echo get_the_post_thumbnail( $workshop->ID, 'full' ); ?>
     <div class="content">
@@ -57,7 +74,7 @@
         </dev>
         <div class="links">
             <button class="btn btn-introduce" onclick="introduceCallback('<?php echo $workshop->meta->workshopInfo['link']; ?>');">معرفی به دوستان</button>
-            <button class="btn btn-register" data-courseID = "<?php echo $workshop->ID; ?>">ثبت نام</button>
+            <button class="btn btn-register" data-courseID = "<?php echo $workshop->ID; ?>" data-courseDate = "<?php echo $date; ?>">ثبت نام</button>
         </div>
     </div>
 </div>

@@ -26,6 +26,7 @@
         ];
         $workshops = $workshop->findAll()->with('meta')->where($where_workshop)->orderBy('id', 'DESC')->get();
     ?>
+
     <!-- Fourmind Start -->
     <section id="fourmind" class="container-fluid fourmind">
         <div class="container">
@@ -64,7 +65,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide main-slide" data-hash="test" data-bullet="فرم تماس">
+                            <div class="swiper-slide main-slide" data-bullet="فرم تماس">
                                 <div class="main-container form-container">
                                     <div class="form-heading">
                                         <h2 class="title">فرم ثبت نام در کارگاه تفکر انتقادی</h2>
@@ -77,9 +78,9 @@
                                     </div>
                                     <form method="get" class="fourmind-form form-step-one">
                                         <div class="row">
-                                            <div class="col-12 column">
+                                            <div class="col-12 d-none column">
                                                 <div class="form-group">
-                                                    <input type="hidden" name="course-id" id="course-id" class="form-control course-id">
+                                                    <input type="hidden" name="course-id" id="course-id" class="form-control course-id" value="0">
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 column">
@@ -145,21 +146,33 @@
                                             <div class="col-12 col-md-6 column">
                                                 <div class="form-group form-group-radio">
                                                     <legend>انتخاب تاریخ کارگاه<span class="star">*</span></legend>
-                                                    <?php $num = 1; ?>
-                                                    <?php foreach( $workshop->meta->workshopInfo['meetings'] as $date ): ?>
-                                                        <?php
-                                                            if( $num === 1 ) {
-                                                                $checked = "checked";
-                                                            } else {
-                                                                $checked = "";
-                                                            }
-                                                        ?>
+
+                                                    <div class="course-date">
                                                         <div class="form-check">
-                                                            <input type="radio" name="date" id="date<?php echo $num; ?>" class="form-check-input date" value="option<?php echo $num; ?>" <?php echo $checked; ?>>
-                                                            <label for="date<?php echo $num; ?>"><?php echo $date['clock']; ?></label>
+                                                            <input type="radio" name="date" id="date99" class="form-check-input date" value="option99" checked>
+                                                            <label for="date99">زمان الان</label>
                                                         </div>
-                                                        <?php $num++; ?>
-                                                    <?php endforeach; ?>
+                                                    </div>
+
+
+                                                    <?php // $num = 1; ?>
+                                                    <?php // foreach( $workshop->meta->workshopInfo['meetings'] as $date ): ?>
+                                                        <?php
+                                                            // if( $num === 1 ) {
+                                                            //     $checked = "checked";
+                                                            // } else {
+                                                            //     $checked = "";
+                                                            // }
+                                                        ?>
+                                                        <!-- <div class="form-check">
+                                                            <input type="radio" name="date" id="date<?php // echo $num; ?>" class="form-check-input date" value="option<?php // echo $num; ?>" <?php // echo $checked; ?>>
+                                                            <label for="date<?php // echo $num; ?>"><?php // echo $date['clock']; ?></label>
+                                                        </div> -->
+                                                        <?php // $num++; ?>
+                                                    <?php // endforeach; ?>
+
+
+
                                                 </div>
                                             </div>
                                         </div>  
@@ -301,25 +314,25 @@
                                                 <div class="form-group">
                                                     <legend>از ارزش‌هایی که در زیر آمده ۶ ارزش رو که برات از همه مهم‌ترن انتخاب کن</legend>
                                                     <div class="btn-group btn-group-narrow" role="group" aria-label="Basic checkbox toggle button group">
-                                                        <input type="checkbox" name="btncheck1" id="btncheck1" class="btn-check btncheck1" /><label class="btn btn-default" for="btncheck1">نوع دوستی</label>
-                                                        <input type="checkbox" name="btncheck2" id="btncheck2" class="btn-check btncheck2" /><label class="btn btn-default" for="btncheck2">توانمندی</label>
-                                                        <input type="checkbox" name="btncheck3" id="btncheck3" class="btn-check btncheck3" /><label class="btn btn-default" for="btncheck3">مسئولیت</label>
-                                                        <input type="checkbox" name="btncheck4" id="btncheck4" class="btn-check btncheck4" /><label class="btn btn-default" for="btncheck4">نوآوری</label>
-                                                        <input type="checkbox" name="btncheck5" id="btncheck5" class="btn-check btncheck5" /><label class="btn btn-default" for="btncheck5">پذیرش</label>
-                                                        <input type="checkbox" name="btncheck6" id="btncheck6" class="btn-check btncheck6" /><label class="btn btn-default" for="btncheck6">تطبیق‌پذیری</label>
-                                                        <input type="checkbox" name="btncheck7" id="btncheck7" class="btn-check btncheck7" /><label class="btn btn-default" for="btncheck7">موفقیت</label>
-                                                        <input type="checkbox" name="btncheck8" id="btncheck8" class="btn-check btncheck8" /><label class="btn btn-default" for="btncheck8">یک‌پارچگی</label>
-                                                        <input type="checkbox" name="btncheck9" id="btncheck9" class="btn-check btncheck9" /><label class="btn btn-default" for="btncheck9">اکتشاف</label>
-                                                        <input type="checkbox" name="btncheck10" id="btncheck10" class="btn-check btncheck10" /><label class="btn btn-default" for="btncheck10">پذیرفته شدن</label>
-                                                        <input type="checkbox" name="btncheck11" id="btncheck11" class="btn-check btncheck11" /><label class="btn btn-default" for="btncheck11">کرامت</label>
-                                                        <input type="checkbox" name="btncheck12" id="btncheck12" class="btn-check btncheck12" /><label class="btn btn-default" for="btncheck12">اصالت</label>
-                                                        <input type="checkbox" name="btncheck13" id="btncheck13" class="btn-check btncheck13" /><label class="btn btn-default" for="btncheck13">قناعت</label>
-                                                        <input type="checkbox" name="btncheck14" id="btncheck14" class="btn-check btncheck14" /><label class="btn btn-default" for="btncheck14">اعتبار</label>
-                                                        <input type="checkbox" name="btncheck15" id="btncheck15" class="btn-check btncheck15" /><label class="btn btn-default" for="btncheck15">دقت</label>
-                                                        <input type="checkbox" name="btncheck16" id="btncheck16" class="btn-check btncheck16" /><label class="btn btn-default" for="btncheck16">مشارکت</label>
-                                                        <input type="checkbox" name="btncheck17" id="btncheck17" class="btn-check btncheck17" /><label class="btn btn-default" for="btncheck17">صداقت</label>
-                                                        <input type="checkbox" name="btncheck18" id="btncheck18" class="btn-check btncheck18" /><label class="btn btn-default" for="btncheck18">نظم</label>
-                                                        <input type="checkbox" name="btncheck19" id="btncheck19" class="btn-check btncheck19" /><label class="btn btn-default" for="btncheck19">امید</label>
+                                                        <input type="checkbox" name="btncheck1" id="btncheck1" class="btn-check btncheck1" data-check-value="نوع دوستی" checked/><label class="btn btn-default" for="btncheck1">نوع دوستی</label>
+                                                        <input type="checkbox" name="btncheck2" id="btncheck2" class="btn-check btncheck2" data-check-value="توانمندی" checked/><label class="btn btn-default" for="btncheck2">توانمندی</label>
+                                                        <input type="checkbox" name="btncheck3" id="btncheck3" class="btn-check btncheck3" data-check-value="مسئولیت" checked/><label class="btn btn-default" for="btncheck3">مسئولیت</label>
+                                                        <input type="checkbox" name="btncheck4" id="btncheck4" class="btn-check btncheck4" data-check-value="نوآوری" checked/><label class="btn btn-default" for="btncheck4">نوآوری</label>
+                                                        <input type="checkbox" name="btncheck5" id="btncheck5" class="btn-check btncheck5" data-check-value="پذیرش" checked/><label class="btn btn-default" for="btncheck5">پذیرش</label>
+                                                        <input type="checkbox" name="btncheck6" id="btncheck6" class="btn-check btncheck6" data-check-value="تطبیق‌پذیری" /><label class="btn btn-default" for="btncheck6">تطبیق‌پذیری</label>
+                                                        <input type="checkbox" name="btncheck7" id="btncheck7" class="btn-check btncheck7" data-check-value="موفقیت" /><label class="btn btn-default" for="btncheck7">موفقیت</label>
+                                                        <input type="checkbox" name="btncheck8" id="btncheck8" class="btn-check btncheck8" data-check-value="یک‌پارچگی" /><label class="btn btn-default" for="btncheck8">یک‌پارچگی</label>
+                                                        <input type="checkbox" name="btncheck9" id="btncheck9" class="btn-check btncheck9" data-check-value="اکتشاف" /><label class="btn btn-default" for="btncheck9">اکتشاف</label>
+                                                        <input type="checkbox" name="btncheck10" id="btncheck10" class="btn-check btncheck10" data-check-value="پذیرفته شدن" /><label class="btn btn-default" for="btncheck10">پذیرفته شدن</label>
+                                                        <input type="checkbox" name="btncheck11" id="btncheck11" class="btn-check btncheck11" data-check-value="کرامت" /><label class="btn btn-default" for="btncheck11">کرامت</label>
+                                                        <input type="checkbox" name="btncheck12" id="btncheck12" class="btn-check btncheck12" data-check-value="اصالت" /><label class="btn btn-default" for="btncheck12">اصالت</label>
+                                                        <input type="checkbox" name="btncheck13" id="btncheck13" class="btn-check btncheck13" data-check-value="قناعت" /><label class="btn btn-default" for="btncheck13">قناعت</label>
+                                                        <input type="checkbox" name="btncheck14" id="btncheck14" class="btn-check btncheck14" data-check-value="اعتبار" /><label class="btn btn-default" for="btncheck14">اعتبار</label>
+                                                        <input type="checkbox" name="btncheck15" id="btncheck15" class="btn-check btncheck15" data-check-value="دقت" /><label class="btn btn-default" for="btncheck15">دقت</label>
+                                                        <input type="checkbox" name="btncheck16" id="btncheck16" class="btn-check btncheck16" data-check-value="مشارکت" /><label class="btn btn-default" for="btncheck16">مشارکت</label>
+                                                        <input type="checkbox" name="btncheck17" id="btncheck17" class="btn-check btncheck17" data-check-value="صداقت" /><label class="btn btn-default" for="btncheck17">صداقت</label>
+                                                        <input type="checkbox" name="btncheck18" id="btncheck18" class="btn-check btncheck18" data-check-value="نظم" /><label class="btn btn-default" for="btncheck18">نظم</label>
+                                                        <input type="checkbox" name="btncheck19" id="btncheck19" class="btn-check btncheck19" data-check-value="امید" /><label class="btn btn-default" for="btncheck19">امید</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -327,12 +340,12 @@
                                                 <div class="form-group">
                                                     <legend>از ارزش‌هایی که در زیر آمده ۳ ارزش رو که برات از همه مهم‌ترن انتخاب کن</legend>
                                                     <div class="btn-group btn-group-narrow" role="group" aria-label="Basic checkbox toggle button group">
-                                                        <input type="checkbox" name="btncheck20" id="btncheck20" class="btn-check btncheck20" /><label class="btn btn-default" for="btncheck20">مسئولیت</label>
-                                                        <input type="checkbox" name="btncheck21" id="btncheck21" class="btn-check btncheck21" /><label class="btn btn-default" for="btncheck21">نوآوری</label>
-                                                        <input type="checkbox" name="btncheck22" id="btncheck22" class="btn-check btncheck22" /><label class="btn btn-default" for="btncheck22">توانمندی</label>
-                                                        <input type="checkbox" name="btncheck23" id="btncheck23" class="btn-check btncheck23" /><label class="btn btn-default" for="btncheck23">دقت</label>
-                                                        <input type="checkbox" name="btncheck24" id="btncheck24" class="btn-check btncheck24" /><label class="btn btn-default" for="btncheck24">نظم</label>
-                                                        <input type="checkbox" name="btncheck25" id="btncheck25" class="btn-check btncheck25" /><label class="btn btn-default" for="btncheck25">موفقیت</label>
+                                                        <input type="checkbox" name="btncheck20" id="btncheck20" class="btn-check btncheck20" data-check-value="مسئولیت" checked/><label class="btn btn-default" for="btncheck20">مسئولیت</label>
+                                                        <input type="checkbox" name="btncheck21" id="btncheck21" class="btn-check btncheck21" data-check-value="نوآوری" checked/><label class="btn btn-default" for="btncheck21">نوآوری</label>
+                                                        <input type="checkbox" name="btncheck22" id="btncheck22" class="btn-check btncheck22" data-check-value="توانمندی" /><label class="btn btn-default" for="btncheck22">توانمندی</label>
+                                                        <input type="checkbox" name="btncheck23" id="btncheck23" class="btn-check btncheck23" data-check-value="دقت" /><label class="btn btn-default" for="btncheck23">دقت</label>
+                                                        <input type="checkbox" name="btncheck24" id="btncheck24" class="btn-check btncheck24" data-check-value="نظم" /><label class="btn btn-default" for="btncheck24">نظم</label>
+                                                        <input type="checkbox" name="btncheck25" id="btncheck25" class="btn-check btncheck25" data-check-value="موفقیت" /><label class="btn btn-default" for="btncheck25">موفقیت</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -466,7 +479,7 @@
                                             </svg>
                                             مرحله قبل
                                         </button>
-                                        <button class="btn btn-next">
+                                        <button class="btn btn-next" onclick="checkoutCallbackAjaxJs();">
                                             پرداخت
                                             <svg width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M15.2501 20.4201L8.73009 13.9001C7.96009 13.1301 7.96009 11.8701 8.73009 11.1001L15.2501 4.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -490,7 +503,7 @@
                                         </div>
                                     </div>
                                     <div class="form-btn">
-                                        <a href="/" class="btn btn-home">
+                                        <a href="<?php echo get_home_url(); ?>" class="btn btn-home">
                                             <svg width="15" height="15" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path opacity="0.4" d="M16.7 6.18324L11.9 2.82491C10.5917 1.90824 8.58333 1.95824 7.32499 2.93324L3.14999 6.19157C2.31666 6.84157 1.65833 8.17491 1.65833 9.22491V14.9749C1.65833 17.0999 3.38333 18.8332 5.50833 18.8332H14.4917C16.6167 18.8332 18.3417 17.1082 18.3417 14.9832V9.33324C18.3417 8.20824 17.6167 6.82491 16.7 6.18324Z" fill="white"/>
                                                 <path d="M10 16.125C9.65833 16.125 9.375 15.8417 9.375 15.5V13C9.375 12.6583 9.65833 12.375 10 12.375C10.3417 12.375 10.625 12.6583 10.625 13V15.5C10.625 15.8417 10.3417 16.125 10 16.125Z" fill="white"/>
@@ -521,7 +534,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
 
-                    <a href="/" class="logo-desktop">
+                    <a href="<?php echo get_home_url(); ?>" class="logo-desktop">
                         <img src="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/img/logo.png" alt="Fourmind Academy" width="auto" height="auto">
                     </a>
                 </div>

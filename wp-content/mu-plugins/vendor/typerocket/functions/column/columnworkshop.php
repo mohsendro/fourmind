@@ -41,7 +41,7 @@ function columns_workshop_data($column, $post_id) {
 
     if ($column == 'info') {
         
-        $meta = get_post_meta( $post_id, 'workshopInfo', true );
+        $meta = get_post_meta( $post_id, 'workshopInfo', true ); //var_dump($meta);
         $count = count($meta);
         if( $count > 0 ) {
 
@@ -49,7 +49,9 @@ function columns_workshop_data($column, $post_id) {
             foreach( $meta as $key => $value ) {
                 
                 if( ! empty( $value ) ) {
-                    echo $value;
+                    if( ! is_array( $value ) ) {
+                        echo $value;
+                    }
                     if( $i < $count ) {
                         echo " | ";
                     }
