@@ -1,8 +1,4 @@
-<?php
-
-if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
-
-?>
+<?php if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly. ?>
 
 <!DOCTYPE html>
 <html lang="<?php echo get_bloginfo('language'); ?>" 
@@ -23,4 +19,4 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
     </title>
     <?php wp_head(); ?>
 </head>
-<body <?php body_class('overflow'); ?> >
+<body <?php body_class('body'); ?> >

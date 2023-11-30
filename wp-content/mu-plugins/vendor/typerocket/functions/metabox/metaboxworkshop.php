@@ -45,11 +45,33 @@ if( class_exists( 'CSF' ) ) {
                 'type'  => 'text',
                 'title' => 'تاریخ دوره',
             ),
+
+            array(
+                'id'     => 'meetings',
+                'type'   => 'repeater',
+                'title'  => 'تاریخ جلسات',
+                'fields' => array(
+              
+                  array(
+                    'id'    => 'clock',
+                    'type'  => 'text',
+                    'title' => 'روز / ساعت'
+                  ),
+              
+                ),
+              ),
+              
             
             array(
                 'id'    => 'time',
                 'type'  => 'text',
                 'title' => 'طول دوره',
+            ),
+
+            array(
+                'id'    => 'link',
+                'type'  => 'text',
+                'title' => 'لینک دوره',
             ),
 
         )

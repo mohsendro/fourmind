@@ -1,27 +1,31 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fourmind Academy | آکادمی فورمایند</title>
-  <link rel="icon" type="image/x-icon" href="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/img/android-chrome-192x192.png">
+<?php if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly. ?>
 
-  <!-- bootstrap-v5 Css -->
-  <link rel="stylesheet" href="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css">
-  <link rel="stylesheet" href="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/vendor/bootstrap/css/bootstrap.rtl.min.css">
-  <!-- <link rel="stylesheet" href="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css"> -->
+<?php get_header(); ?>
 
-  <!-- Swiper Css -->
-  <link rel="stylesheet" href="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/vendor/swiper/css/swiper-bundle.min.css">
+    <?php
+        $queried_id = get_queried_object_id();
 
-  <!-- Diplomat Css -->
-  <!-- <link rel="stylesheet" href="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/css/global.css"> -->
-  <link rel="stylesheet" href="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/css/style.css">
-  <!-- <link rel="stylesheet" href="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/css/responsive.css"> -->
-</head>
-<body class="body">
+        $option = new \App\Models\Option;
+        $where_option = [
+            [
+                'column'   => 'option_name',
+                'operator' => '=',
+                'value'    => 'posts_per_page'
+            ]
+        ];
+        $option = $option->findAll()->where($where_option)->select('option_value')->get()->toArray();
+        $option = $option[0]['option_value'];
 
+        $workshop = new \App\Models\Workshop;
+        $where_workshop = [
+            [
+                'column'   => 'post_status',
+                'operator' => '=',
+                'value'    => 'publish'
+            ]
+        ];
+        $workshops = $workshop->findAll()->with('meta')->where($where_workshop)->orderBy('id', 'DESC')->get();
+    ?>
     <!-- Fourmind Start -->
     <section id="fourmind" class="container-fluid fourmind">
         <div class="container">
@@ -53,16 +57,14 @@
                                     <!-- Slider inside container -->
                                     <div class="swiper cardSwiper">
                                         <div class="swiper-wrapper">
-                                            <?php
-                                                for( $i = 0; $i < 10 ; $i++ ) { 
-                                                    include dirname(__FILE__) . '/components/card.php';
-                                                }
-                                            ?>
+                                            <?php foreach( $workshops as $workshop ): ?>
+                                                <?php require TYPEROCKET_DIR_PATH . '/resources/themes/wpplus/components/card.php'; ?>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide main-slide" data-bullet="فرم تماس">
+                            <div class="swiper-slide main-slide" data-hash="test" data-bullet="فرم تماس">
                                 <div class="main-container form-container">
                                     <div class="form-heading">
                                         <h2 class="title">فرم ثبت نام در کارگاه تفکر انتقادی</h2>
@@ -143,14 +145,21 @@
                                             <div class="col-12 col-md-6 column">
                                                 <div class="form-group form-group-radio">
                                                     <legend>انتخاب تاریخ کارگاه<span class="star">*</span></legend>
-                                                    <div class="form-check">
-                                                        <input type="radio" name="date" id="date1" class="form-check-input date" value="option1" checked>
-                                                        <label for="date1">1 مهر 1402</label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input type="radio" name="date" id="date2" class="form-check-input date" value="option2">
-                                                        <label for="date2">2 مهر 1402</label>
-                                                    </div>
+                                                    <?php $num = 1; ?>
+                                                    <?php foreach( $workshop->meta->workshopInfo['meetings'] as $date ): ?>
+                                                        <?php
+                                                            if( $num === 1 ) {
+                                                                $checked = "checked";
+                                                            } else {
+                                                                $checked = "";
+                                                            }
+                                                        ?>
+                                                        <div class="form-check">
+                                                            <input type="radio" name="date" id="date<?php echo $num; ?>" class="form-check-input date" value="option<?php echo $num; ?>" <?php echo $checked; ?>>
+                                                            <label for="date<?php echo $num; ?>"><?php echo $date['clock']; ?></label>
+                                                        </div>
+                                                        <?php $num++; ?>
+                                                    <?php endforeach; ?>
                                                 </div>
                                             </div>
                                         </div>  
@@ -521,15 +530,4 @@
     </section>
     <!-- Fourmind End -->
 
-  <!-- bootstrap-v5 Js -->
-  <script src="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/vendor/bootstrap/js/popper.min.js"></script> -->
-  <!-- <script src="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/vendor/bootstrap/js/bootstrap.min.js"></script> -->
-
-  <!-- Swiper Js -->
-  <script src="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
-
-  <!-- Fourmind Js -->
-  <script src="<?php echo TYPEROCKET_DIR_URL; ?>resources/assets/js/script.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>

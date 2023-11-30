@@ -1,6 +1,6 @@
 // Initialize Swiper
 var swiper = new Swiper(".fourmindSwiper", {
-    // allowTouchMove: false,
+    allowTouchMove: false,
     pagination: {
       el: ".swiper-pagination",
       clickable: false,
