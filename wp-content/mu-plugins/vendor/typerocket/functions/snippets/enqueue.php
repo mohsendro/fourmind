@@ -25,7 +25,7 @@ function wpplus_enqueue_scripts() {
     wp_register_script( 'swiper-bundle', TYPEROCKET_DIR_URL . 'resources/assets/vendor/swiper/js/swiper-bundle.min.js', false, '11.0.4' );
     // <!-- Fourmind Js -->
 	wp_register_script( 'fourmind', TYPEROCKET_DIR_URL . 'resources/assets/js/script.js', false, '1.0.0', true );
-	wp_register_script( 'ajax-workshop', TYPEROCKET_DIR_URL . 'resources/assets/js/ajaxworkshop.js', false, '1.0.0', true );
+	wp_register_script( 'ajax-workshop', TYPEROCKET_DIR_URL . 'resources/assets/js/ajaxworkshop.js', array('jquery'), '1.0.0', true );
 
 	wp_enqueue_style( 'bootstrap-reboot' );
 	wp_enqueue_style( 'bootstrap' );

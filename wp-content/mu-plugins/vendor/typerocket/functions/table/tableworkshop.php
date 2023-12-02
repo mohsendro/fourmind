@@ -46,13 +46,8 @@ class Table_Workshop_List_Table extends WP_List_Table {
     private function get_table_workshop_data($search = "") {
 
         $TableWorkshopController = new \App\Controllers\ReservationController;
-        $this->table_data = $TableWorkshopController::index();
-
-        // if( empty($this->table_data) ) {
-        //     return "درخواستی ثبت نشده است";
-        // } else {
-            return $this->table_data;
-        // }
+        $this->table_data = $TableWorkshopController::archive();
+        return $this->table_data;
           
     }
 
@@ -67,6 +62,7 @@ class Table_Workshop_List_Table extends WP_List_Table {
                 'job'         => 'شغل',
                 'tel'         => 'تلفن' ,
                 'email'       => 'ایمیل',
+                'more'        => '',
           );
           return $columns;
 
@@ -140,7 +136,7 @@ class Table_Workshop_List_Table extends WP_List_Table {
                 return $item['ID'];
 
             case 'course_id':
-                return $item['course_id'];
+                return "<a href='". admin_url('post.php?post='.$item['course_id'].'&action=edit') ."'>". get_the_title($item['course_id']) ."</a>";
 
             case 'full_name':
                 return $item['full_name'];                       
@@ -153,6 +149,9 @@ class Table_Workshop_List_Table extends WP_List_Table {
 
             case 'email':
                 return $item['email'];
+
+            case 'more':
+                return "<a href='". admin_url('admin.php?page=workshops&course_id='.$item['course_id']) ."'>جزئیات</a>";
 
             default:
                 return print_r($item, true); //Show the whole array for troubleshooting purposes

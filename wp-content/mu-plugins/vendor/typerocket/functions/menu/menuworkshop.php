@@ -38,7 +38,11 @@ add_filter('set-screen-option', 'menu_workshop_table_set_option', 10, 3);
 
 function register_menu_workshop_page_callback() {
 
-    require_once plugin_dir_path(__FILE__) . "../table/tableworkshop.php";
+    if( isset($_GET['course_id']) && $_GET['course_id'] ) {
+        require_once plugin_dir_path(__FILE__) . "../page/pageworkshop.php";
+    } else {
+        require_once plugin_dir_path(__FILE__) . "../table/tableworkshop.php";
+    }
 
 }
 

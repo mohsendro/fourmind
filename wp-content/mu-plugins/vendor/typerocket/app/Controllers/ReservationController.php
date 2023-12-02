@@ -11,7 +11,7 @@ class ReservationController extends WPPostController
     protected $modelClass = Reservation::class;
 
     // Admin
-    static public function index()
+    static public function archive()
     {
 
         // $workshops = new App\Models\Reservation();
@@ -51,5 +51,29 @@ class ReservationController extends WPPostController
 
         return $workshops;
         
+    }
+
+    static public function single()
+    {
+
+        // $workshop = new App\Models\Reservation();
+        // $workshop = $workshop->findAll()->orderBy('ID', 'DESC')->get()->toArray();
+        $where_search = [
+            [
+                'column'   => 'course_id',
+                'operator' => '=',
+                'value'    =>  $_GET['course_id']
+            ]
+        ];
+
+        $workshop = Reservation::new()->findAll()->where($where_search)->get();
+        if( $workshop ) {
+            $workshop = $workshop->toArray();
+        } else {
+            $workshop = [];
+        }
+
+        return $workshop;
+
     }
 }

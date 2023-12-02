@@ -416,7 +416,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide main-slide" data-bullet="هزینه">
+                            <div class="swiper-slide main-slide" data-hash="test" data-bullet="هزینه">
                                 <div class="main-container form-container">
                                     <div class="form-heading">
                                         <h2 class="title">فرم ثبت نام در کارگاه تفکر انتقادی</h2>

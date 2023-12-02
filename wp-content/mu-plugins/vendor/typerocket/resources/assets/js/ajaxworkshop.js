@@ -66,11 +66,11 @@ function checkoutCallbackAjaxJs() {
         },
         success: function (response) {
             alert(response.data.success);
-            console.log(response);
+            // console.log(response);
         },
         error: function (response) {
             alert('Error retrieving the information: ' + response.status + ' ' + response.statusText);
-            console.log(response);
+            // console.log('ree');
         }
     });
 
