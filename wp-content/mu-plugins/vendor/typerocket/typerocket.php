@@ -44,7 +44,7 @@ require_once plugin_dir_path(__FILE__) . 'functions/menu/menuworkshop.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/menu/menusample.php';
 
 // Table
-require_once plugin_dir_path(__FILE__) . 'functions/table/tableworkshop.php';
+// require_once plugin_dir_path(__FILE__) . 'functions/table/tableworkshop.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/table/tablesample.php';
 
 // Columns

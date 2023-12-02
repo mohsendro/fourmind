@@ -20,7 +20,7 @@ function menu_workshop_table_add_options() {
     $args_page = array(
         'label' => 'تعداد موردها در هر برگه:',
         'default' => 20,
-        'option' => 'menu_workshop_per_page'
+        'option' => 'table_workshop_per_page'
     );
 
     add_screen_option('per_page', $args_page);
@@ -38,7 +38,7 @@ add_filter('set-screen-option', 'menu_workshop_table_set_option', 10, 3);
 
 function register_menu_workshop_page_callback() {
 
-    require_once plugin_dir_path(__FILE__) . "../table/workshop.php";
+    require_once plugin_dir_path(__FILE__) . "../table/tableworkshop.php";
 
 }
 

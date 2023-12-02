@@ -33,6 +33,7 @@ function wpplus_enqueue_scripts() {
 	wp_enqueue_style( 'fourmind' );
 	wp_enqueue_script( 'bootstrap-bundle' );
 	wp_enqueue_script( 'swiper-bundle' );
+    wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'fourmind' );
     wp_enqueue_script( 'ajax-workshop' );
 

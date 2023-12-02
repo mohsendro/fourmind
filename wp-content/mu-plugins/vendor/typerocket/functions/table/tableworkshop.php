@@ -45,9 +45,14 @@ class Table_Workshop_List_Table extends WP_List_Table {
 
     private function get_table_workshop_data($search = "") {
 
-        $TableWorkshopController = new \App\Controllers\WorkshopController;
-        $this->table_data = $TableWorkshopController::home();
-        return $this->table_data;
+        $TableWorkshopController = new \App\Controllers\ReservationController;
+        $this->table_data = $TableWorkshopController::index();
+
+        // if( empty($this->table_data) ) {
+        //     return "درخواستی ثبت نشده است";
+        // } else {
+            return $this->table_data;
+        // }
           
     }
 
@@ -55,13 +60,13 @@ class Table_Workshop_List_Table extends WP_List_Table {
     function get_columns() {
 
           $columns = array(
-                // 'cb'            => '<input type="checkbox" />',
-                // 'ID'           => 'شناسه',
-                'post_title'   => 'عنوان',
-                'post_author'  => 'کاربر',
-                'post_date'    => 'تاریخ درخواست',
-                'post_content' => 'توضیحات' ,
-                'post_status'  => 'وضعیت',
+                // 'cb'           => '<input type="checkbox" />',
+                'ID'          => 'شناسه',
+                'course_id'   => 'شناسه کارگاه',
+                'full_name'   => 'نام',
+                'job'         => 'شغل',
+                'tel'         => 'تلفن' ,
+                'email'       => 'ایمیل',
           );
           return $columns;
 
@@ -82,7 +87,7 @@ class Table_Workshop_List_Table extends WP_List_Table {
           $this->_column_headers = array($columns, $hidden, $sortable);
 
           /* pagination */
-          $per_page = $this->get_items_per_page('table_sample_per_page', 20);
+          $per_page = $this->get_items_per_page('table_workshop_per_page', 20);
           $current_page = $this->get_pagenum();
           $total_items = count($this->table_data);
 
@@ -132,22 +137,22 @@ class Table_Workshop_List_Table extends WP_List_Table {
         switch ($column_name) {
 
             case 'ID':
-                return ;
+                return $item['ID'];
 
-            case 'post_title':
-                return ;
+            case 'course_id':
+                return $item['course_id'];
 
-            case 'post_content':
-                return ;                       
+            case 'full_name':
+                return $item['full_name'];                       
 
-            case 'post_author':
-                return ;
+            case 'job':
+                return $item['job'];
 
-            case 'post_date':
-                return ;
+            case 'tel':
+                return $item['tel'];
 
-            case 'post_status':
-                return ;
+            case 'email':
+                return $item['email'];
 
             default:
                 return print_r($item, true); //Show the whole array for troubleshooting purposes
