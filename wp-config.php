@@ -48,14 +48,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define('AUTH_KEY',         'WO5~~SC#}W;!lKp&:=3)JF433qsj-gqgv^5gSlq.P}:}{Kw.IE&AlQd*,_X{f4gm');
+define('SECURE_AUTH_KEY',  'axAjTPX:kux!oT:40os?qh.No+xW;}AW!RDbys1]kA$T>;%R9u^sFaZteW(J86_o');
+define('LOGGED_IN_KEY',    '<#Nn>*|*a`A9r26-Y7PkMmgrPa07?nG2LKFdEDo0hKgq:~@ng3BNHD=r-gCaNHi&');
+define('NONCE_KEY',        'fH)3VcKk.]$nTsKcoow;GNo&@:j&r?{3<k<rHy$^ywSvKH IsgMB|>Oyrp59BPBO');
+define('AUTH_SALT',        'XD?iKT9Xhv7EUu0;^SaDR@..(x2C{S^)H_*O,S!5/]b9+J4fi($}eI6,:;kO:}[S');
+define('SECURE_AUTH_SALT', 'CEJ<j`+:oYxxM3BM$FfQws[i)_RvHepV>4tSKmQq}eJ[ycc2aP/OP[.ML!@]yp+m');
+define('LOGGED_IN_SALT',   'Me%Y9${Kmd`PkPR(xWx4 _+S![{A]:=-Ut:w|Wk^r<r]7BVs+E%K%+_#Vdod~KP9');
+define('NONCE_SALT',       'R_tqrTuBSC|g<o=h2}Wi|Ed7m9=3_|x#`u5Ka .+py|59DpvH=lIU}UEL#C/zbA~');
 
 /**#@-*/
 
@@ -109,10 +109,10 @@ define( 'WP_DEBUG', false );
 // define( 'ENFORCE_GZIP',        true );
 // define( 'DO_NOT_UPGRADE_GLOBAL_TABLES', true );
 
-// define( 'WP_AUTO_UPDATE_CORE', false );
-// define( 'DISALLOW_FILE_MODS', true );
-// define( 'DISALLOW_FILE_EDIT', true );
-// define( 'AUTOMATIC_UPDATER_DISABLED', true );
+define( 'WP_AUTO_UPDATE_CORE', false );
+define( 'DISALLOW_FILE_MODS', true );
+define( 'DISALLOW_FILE_EDIT', true );
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
