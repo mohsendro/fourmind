@@ -47,20 +47,6 @@ function wpplus_enqueue_scripts() {
     );
 
 }
-
-function wpplus_enqueue_scripts_admin() {
-
-    wp_enqueue_script( 'jquery' );
-    // Ajax Handler
-    wp_localize_script(
-        'ajax-workshop', 'workshop_ajax_localize_obj', array(
-            'ajax_url' => admin_url( 'admin-ajax.php' ),
-            // 'ajax_url' => ABSPATH . 'wp-admin/admin-ajax.php' ,
-            // 'the_nonce' => wp_create_nonce('workshop_form_nonce') 
-        )
-    );
-    
-}
 add_action( 'wp_enqueue_scripts', 'wpplus_enqueue_scripts' );
-// add_action( 'admin_enqueue_scripts', 'wpplus_enqueue_scripts_admin' );
+// add_action( 'admin_enqueue_scripts', 'wpplus_enqueue_scripts' );
 // add_action( 'enqueue_embed_scripts', 'wpplus_enqueue_scripts' );

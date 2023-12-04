@@ -151,7 +151,7 @@ class Table_Workshop_List_Table extends WP_List_Table {
                 return $item['email'];
 
             case 'more':
-                return "<a href='". admin_url('admin.php?page=workshops&course_id='.$item['course_id']) ."'>جزئیات</a>";
+                return "<a href='". admin_url('admin.php?page=workshops&ID='.$item['ID']) ."'>جزئیات</a>";
 
             default:
                 return print_r($item, true); //Show the whole array for troubleshooting purposes

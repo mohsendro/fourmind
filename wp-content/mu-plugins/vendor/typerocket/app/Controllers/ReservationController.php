@@ -60,9 +60,9 @@ class ReservationController extends WPPostController
         // $workshop = $workshop->findAll()->orderBy('ID', 'DESC')->get()->toArray();
         $where_search = [
             [
-                'column'   => 'course_id',
+                'column'   => 'ID',
                 'operator' => '=',
-                'value'    =>  $_GET['course_id']
+                'value'    =>  $_GET['ID']
             ]
         ];
 

@@ -9,7 +9,7 @@ function workshop_ajax_handle_function() {
     check_ajax_referer( 'workshop_form_nonce', 'submitted_nonce' );  // This function will die if submitted_nonce is not correct.
 
     $model = new App\Models\Reservation();
-    $model->course_id = sanitize_text_field($_POST['course_id']);
+    $model->course_id = sanitize_text_field($_POST['courseID']);
     $model->full_name = sanitize_text_field($_POST['fullName']);
     $model->job = sanitize_text_field($_POST['job']);
     $model->field = sanitize_text_field($_POST['field']);
