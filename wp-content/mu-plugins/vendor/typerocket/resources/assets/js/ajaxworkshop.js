@@ -41,6 +41,10 @@ function checkoutCallbackAjaxJs() {
         url: workshop_ajax_localize_obj.ajax_url,
         type: 'post',
         dataType: 'json',
+        // method: 'post',
+        // contentType : 'application/json; charset=utf-8',
+        // contentType: false,
+        // processData: false,
         data: {
             action: 'workshop_ajax_handle',
             submitted_nonce: workshop_ajax_localize_obj.the_nonce,
@@ -69,7 +73,7 @@ function checkoutCallbackAjaxJs() {
             // console.log(response);
         },
         error: function (response) {
-            alert('Error retrieving the information: ' + response.status + ' ' + response.statusText);
+            // alert('Error retrieving the information: ' + response.status + ' ' + response.statusText);
             // console.log('ree');
         }
     });
