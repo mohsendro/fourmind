@@ -69,7 +69,7 @@ function checkoutCallbackAjaxJs() {
             price: price,
         },
         success: function (response) {
-            alert(response.data.success);
+            // alert(response.data.success);
             // console.log(response);
         },
         error: function (response) {
