@@ -8,6 +8,11 @@ function workshop_ajax_handle_function() {
 
     check_ajax_referer( 'workshop_form_nonce', 'submitted_nonce' );  // This function will die if submitted_nonce is not correct.
 
+    // $questionsList = [];
+    // $questionsList[] = [$_POST['label1'] => sanitize_text_field($_POST['question1'])];
+    // $questionsList[] = [$_POST['label2'] => sanitize_text_field($_POST['question2'])];
+    // $questionsList[] = [$_POST['label3'] => sanitize_text_field($_POST['question3'])];
+
     $model = new App\Models\Reservation();
     $model->course_id = sanitize_text_field($_POST['courseID']);
     $model->full_name = sanitize_text_field($_POST['fullName']);
@@ -15,19 +20,9 @@ function workshop_ajax_handle_function() {
     $model->field = sanitize_text_field($_POST['field']);
     $model->tel = sanitize_text_field($_POST['tel']);
     $model->email = sanitize_text_field($_POST['email']);
-    $model->date = sanitize_text_field($_POST['date']);
-    $model->textarea1 = sanitize_text_field($_POST['textarea1']);
-    $model->textarea2 = sanitize_text_field($_POST['textarea2']);
-    $model->textarea3 = sanitize_text_field($_POST['textarea3']);
-    $model->textarea4 = sanitize_text_field($_POST['textarea4']);
-    $model->textarea5 = sanitize_text_field($_POST['textarea5']);
-    $model->textarea6 = sanitize_text_field($_POST['textarea6']);
-    $model->textarea7 = sanitize_text_field($_POST['textarea7']);
-    $model->textarea8 = sanitize_text_field($_POST['textarea8']);
-    $model->textarea9 = sanitize_text_field($_POST['textarea9']);
-    $model->textarea10 = sanitize_text_field($_POST['textarea10']);
-    $model->checkList = sanitize_text_field($_POST['checkList']);
-    $model->price = sanitize_text_field($_POST['price']);
+    // $model->questions = $questionsList;
+    // $model->price = $_POST['price'];
+    // $model->status = 0;
     $model->save(); 
 
     $response = array(

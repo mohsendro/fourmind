@@ -76,4 +76,29 @@ class ReservationController extends WPPostController
         return $workshop;
 
     }
+
+    static public function countReservation()
+    {
+
+        if( is_admin() && isset($_GET['post']) ) {
+            $where_search = [
+                [
+                    'column'   => 'course_id',
+                    'operator' => '=',
+                    'value'    =>  $_GET['post']
+                ],
+            ];
+
+            $workshops = Reservation::new()->findAll()->where($where_search)->select('id')->orderBy('ID', 'DESC')->get();
+            if( $workshops ) {
+                $workshops = $workshops->toArray();
+            } else {
+                $workshops = [];
+            }
+
+            return count($workshops);
+        }
+
+    }
+
 }

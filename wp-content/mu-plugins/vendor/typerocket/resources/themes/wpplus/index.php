@@ -25,7 +25,7 @@
         ]
     ];
     $workshops = $workshop->findAll()->with('meta')->where($where_workshop)->orderBy('id', 'DESC')->get();
-?>
+?> 
 
 <!-- Fourmind Start -->
 <section id="fourmind" class="container-fluid fourmind">
@@ -55,22 +55,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide main-slide" data-bullet="کارگاه‌ها">
+                        <div class="swiper-slide main-slide" data-hash="step2" data-bullet="کارگاه‌ها">
                             <div class="main-container">
                                 <!-- Slider inside container -->
                                 <div class="swiper cardSwiper">
                                     <div class="swiper-wrapper">
                                         <?php foreach( $workshops as $workshop ): ?>
-                                            <?php require TYPEROCKET_DIR_PATH . '/resources/themes/wpplus/components/card.php'; ?>
+                                            <?php include TYPEROCKET_DIR_PATH . '/resources/themes/wpplus/components/card.php'; ?>
                                         <?php endforeach; ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide main-slide" data-bullet="فرم تماس">
+                        <div class="swiper-slide main-slide" data-hash="step3" data-bullet="فرم تماس">
                             <div class="main-container form-container">
                                 <div class="form-heading">
-                                    <h2 class="title">فرم ثبت نام در کارگاه تفکر انتقادی</h2>
+                                    <h2 class="title coursse-title">عنوان فرم</h2>
                                     <span class="notic d-none">
                                         <svg width="20" height="20" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M12 2.5C6.49 2.5 2 6.99 2 12.5C2 18.01 6.49 22.5 12 22.5C17.51 22.5 22 18.01 22 12.5C22 6.99 17.51 2.5 12 2.5ZM11.25 8.5C11.25 8.09 11.59 7.75 12 7.75C12.41 7.75 12.75 8.09 12.75 8.5V13.5C12.75 13.91 12.41 14.25 12 14.25C11.59 14.25 11.25 13.91 11.25 13.5V8.5ZM12.92 16.88C12.87 17.01 12.8 17.11 12.71 17.21C12.61 17.3 12.5 17.37 12.38 17.42C12.26 17.47 12.13 17.5 12 17.5C11.87 17.5 11.74 17.47 11.62 17.42C11.5 17.37 11.39 17.3 11.29 17.21C11.2 17.11 11.13 17.01 11.08 16.88C11.03 16.76 11 16.63 11 16.5C11 16.37 11.03 16.24 11.08 16.12C11.13 16 11.2 15.89 11.29 15.79C11.39 15.7 11.5 15.63 11.62 15.58C11.86 15.48 12.14 15.48 12.38 15.58C12.5 15.63 12.61 15.7 12.71 15.79C12.8 15.89 12.87 16 12.92 16.12C12.97 16.24 13 16.37 13 16.5C13 16.63 12.97 16.76 12.92 16.88Z" fill="#FF5858"/>
@@ -163,10 +163,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide main-slide" data-bullet="فرم سوالات">
+                        <div class="swiper-slide main-slide" data-hash="step4" data-bullet="فرم سوالات">
                             <div class="main-container form-container">
                                 <div class="form-heading">
-                                    <h2 class="title">فرم ثبت نام در کارگاه تفکر انتقادی</h2>
+                                    <h2 class="title coursse-title">عنوان فرم</h2>
                                     <span class="notic">
                                         <svg width="20" height="20" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M12 2.5C6.49 2.5 2 6.99 2 12.5C2 18.01 6.49 22.5 12 22.5C17.51 22.5 22 18.01 22 12.5C22 6.99 17.51 2.5 12 2.5ZM11.25 8.5C11.25 8.09 11.59 7.75 12 7.75C12.41 7.75 12.75 8.09 12.75 8.5V13.5C12.75 13.91 12.41 14.25 12 14.25C11.59 14.25 11.25 13.91 11.25 13.5V8.5ZM12.92 16.88C12.87 17.01 12.8 17.11 12.71 17.21C12.61 17.3 12.5 17.37 12.38 17.42C12.26 17.47 12.13 17.5 12 17.5C11.87 17.5 11.74 17.47 11.62 17.42C11.5 17.37 11.39 17.3 11.29 17.21C11.2 17.11 11.13 17.01 11.08 16.88C11.03 16.76 11 16.63 11 16.5C11 16.37 11.03 16.24 11.08 16.12C11.13 16 11.2 15.89 11.29 15.79C11.39 15.7 11.5 15.63 11.62 15.58C11.86 15.48 12.14 15.48 12.38 15.58C12.5 15.63 12.61 15.7 12.71 15.79C12.8 15.89 12.87 16 12.92 16.12C12.97 16.24 13 16.37 13 16.5C13 16.63 12.97 16.76 12.92 16.88Z" fill="#FF5858"/>
@@ -178,20 +178,20 @@
                                     <div class="row">
                                         <div class="col-12 column">
                                             <div class="form-group">
-                                                <label for="textarea1">در مورد چه چیزهایی سال‌ها خیلی اشتباه فکر می‌کردی؟</label>
-                                                <textarea name="textarea1" id="textarea1" class="form-control textarea textarea1" rows="2"></textarea>
+                                                <label for="question1">عنوان سوال</label>
+                                                <textarea name="question1" id="question1" class="form-control question question1" rows="2"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12 column">
                                             <div class="form-group">
-                                                <label for="textarea2">چطور میتونی متوجه بشی که افکارت کارآمد یا ناکارآمد هستند؟</label>
-                                                <textarea name="textarea2" id="textarea2" class="form-control textarea textarea2" rows="2"></textarea>
+                                                <label for="question2">عنوان سوال</label>
+                                                <textarea name="question2" id="question2" class="form-control question question2" rows="2"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12 column">
                                             <div class="form-group">
-                                                <label for="textarea3">چه زمان‌ها و در جه موقعیت‌هایی تونستی به اشتباهاتت پی ببری؟</label>
-                                                <textarea name="textarea3" id="textarea3" class="form-control textarea textarea3" rows="2"></textarea>
+                                                <label for="question3">عنوان سوال</label>
+                                                <textarea name="question3" id="question3" class="form-control question question3" rows="2"></textarea>
                                             </div>
                                         </div>
                                     </div>  
@@ -212,185 +212,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide main-slide" data-bullet="فرم سوالات">
+                        <div class="swiper-slide main-slide" data-hash="step5" data-bullet="هزینه">
                             <div class="main-container form-container">
                                 <div class="form-heading">
-                                    <h2 class="title">فرم ثبت نام در کارگاه تفکر تیم محور</h2>
-                                    <span class="notic">
-                                        <svg width="20" height="20" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2.5C6.49 2.5 2 6.99 2 12.5C2 18.01 6.49 22.5 12 22.5C17.51 22.5 22 18.01 22 12.5C22 6.99 17.51 2.5 12 2.5ZM11.25 8.5C11.25 8.09 11.59 7.75 12 7.75C12.41 7.75 12.75 8.09 12.75 8.5V13.5C12.75 13.91 12.41 14.25 12 14.25C11.59 14.25 11.25 13.91 11.25 13.5V8.5ZM12.92 16.88C12.87 17.01 12.8 17.11 12.71 17.21C12.61 17.3 12.5 17.37 12.38 17.42C12.26 17.47 12.13 17.5 12 17.5C11.87 17.5 11.74 17.47 11.62 17.42C11.5 17.37 11.39 17.3 11.29 17.21C11.2 17.11 11.13 17.01 11.08 16.88C11.03 16.76 11 16.63 11 16.5C11 16.37 11.03 16.24 11.08 16.12C11.13 16 11.2 15.89 11.29 15.79C11.39 15.7 11.5 15.63 11.62 15.58C11.86 15.48 12.14 15.48 12.38 15.58C12.5 15.63 12.61 15.7 12.71 15.79C12.8 15.89 12.87 16 12.92 16.12C12.97 16.24 13 16.37 13 16.5C13 16.63 12.97 16.76 12.92 16.88Z" fill="#FF5858"/>
-                                        </svg>
-                                        جواب دادن به این سوالات اجباری نیست اما پاسخ دادن به اون‌ها تاثیر بسیار زیادی روی طراحی هدفمند مباحث کارگاه برای مخاطبین و جنس دغدغه اونها داره. 
-                                    </span>
-                                </div>
-                                <form method="get" class="fourmind-form form-step-three">
-                                    <div class="row">
-                                        <div class="col-12 column">
-                                            <div class="form-group">
-                                                <label for="textarea4">چه خاطره‌ای یادت میاد که روی تیم‌ورک بودنت تاثیر منفی گذاشته؟</label>
-                                                <textarea name="textarea4" id="textarea4" class="form-control textarea textarea4" rows="2"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 column">
-                                            <div class="form-group">
-                                                <label for="textarea5">یک تجربه شخصی از تیم‌ورک رو برامون بنویس</label>
-                                                <textarea name="textarea5" id="textarea5" class="form-control textarea textarea5" rows="2"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 column">
-                                            <div class="form-group">
-                                                <label for="textarea6">به نظرت چرا در ایران در کار تیمی ضعیف هستیم؟</label>
-                                                <textarea name="textarea6" id="textarea6" class="form-control textarea textarea6" rows="2"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </form>
-                                <div class="form-btn">
-                                    <button class="btn btn-prev">
-                                        <svg width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M9.66003 20.4201L16.18 13.9001C16.95 13.1301 16.95 11.8701 16.18 11.1001L9.66003 4.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                        مرحله قبل
-                                    </button>
-                                    <button class="btn btn-next">
-                                        مرحله بعد
-                                        <svg width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15.2501 20.4201L8.73009 13.9001C7.96009 13.1301 7.96009 11.8701 8.73009 11.1001L15.2501 4.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide main-slide" data-bullet="فرم سوالات">
-                            <div class="main-container form-container">
-                                <div class="form-heading">
-                                    <h2 class="title">فرم ثبت نام در کارگاه نگرش پایدار، اقتصاد متقابل و خلق ارزش</h2>
-                                    <span class="notic">
-                                        <svg width="20" height="20" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2.5C6.49 2.5 2 6.99 2 12.5C2 18.01 6.49 22.5 12 22.5C17.51 22.5 22 18.01 22 12.5C22 6.99 17.51 2.5 12 2.5ZM11.25 8.5C11.25 8.09 11.59 7.75 12 7.75C12.41 7.75 12.75 8.09 12.75 8.5V13.5C12.75 13.91 12.41 14.25 12 14.25C11.59 14.25 11.25 13.91 11.25 13.5V8.5ZM12.92 16.88C12.87 17.01 12.8 17.11 12.71 17.21C12.61 17.3 12.5 17.37 12.38 17.42C12.26 17.47 12.13 17.5 12 17.5C11.87 17.5 11.74 17.47 11.62 17.42C11.5 17.37 11.39 17.3 11.29 17.21C11.2 17.11 11.13 17.01 11.08 16.88C11.03 16.76 11 16.63 11 16.5C11 16.37 11.03 16.24 11.08 16.12C11.13 16 11.2 15.89 11.29 15.79C11.39 15.7 11.5 15.63 11.62 15.58C11.86 15.48 12.14 15.48 12.38 15.58C12.5 15.63 12.61 15.7 12.71 15.79C12.8 15.89 12.87 16 12.92 16.12C12.97 16.24 13 16.37 13 16.5C13 16.63 12.97 16.76 12.92 16.88Z" fill="#FF5858"/>
-                                        </svg>
-                                        جواب دادن به این سوالات اجباری نیست اما پاسخ دادن به اون‌ها تاثیر بسیار زیادی روی طراحی هدفمند مباحث کارگاه برای مخاطبین و جنس دغدغه اونها داره. 
-                                    </span>
-                                </div>
-                                <form method="get" class="fourmind-form form-step-four">
-                                    <div class="row">
-                                        <div class="col-12 column">
-                                            <div class="form-group">
-                                                <label for="textarea7">یک رابطه پایدار از دید تو چگونه است؟</label>
-                                                <textarea name="textarea7" id="textarea7" class="form-control textarea textarea7" rows="2"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 column">
-                                            <div class="form-group">
-                                                <legend>از ارزش‌هایی که در زیر آمده ۶ ارزش رو که برات از همه مهم‌ترن انتخاب کن</legend>
-                                                <div class="btn-group btn-group-narrow" role="group" aria-label="Basic checkbox toggle button group">
-                                                    <input type="checkbox" name="btncheck1" id="btncheck1" class="btn-check btncheck1" data-check-value="نوع دوستی" checked/><label class="btn btn-default" for="btncheck1">نوع دوستی</label>
-                                                    <input type="checkbox" name="btncheck2" id="btncheck2" class="btn-check btncheck2" data-check-value="توانمندی" checked/><label class="btn btn-default" for="btncheck2">توانمندی</label>
-                                                    <input type="checkbox" name="btncheck3" id="btncheck3" class="btn-check btncheck3" data-check-value="مسئولیت" checked/><label class="btn btn-default" for="btncheck3">مسئولیت</label>
-                                                    <input type="checkbox" name="btncheck4" id="btncheck4" class="btn-check btncheck4" data-check-value="نوآوری" checked/><label class="btn btn-default" for="btncheck4">نوآوری</label>
-                                                    <input type="checkbox" name="btncheck5" id="btncheck5" class="btn-check btncheck5" data-check-value="پذیرش" checked/><label class="btn btn-default" for="btncheck5">پذیرش</label>
-                                                    <input type="checkbox" name="btncheck6" id="btncheck6" class="btn-check btncheck6" data-check-value="تطبیق‌پذیری" /><label class="btn btn-default" for="btncheck6">تطبیق‌پذیری</label>
-                                                    <input type="checkbox" name="btncheck7" id="btncheck7" class="btn-check btncheck7" data-check-value="موفقیت" /><label class="btn btn-default" for="btncheck7">موفقیت</label>
-                                                    <input type="checkbox" name="btncheck8" id="btncheck8" class="btn-check btncheck8" data-check-value="یک‌پارچگی" /><label class="btn btn-default" for="btncheck8">یک‌پارچگی</label>
-                                                    <input type="checkbox" name="btncheck9" id="btncheck9" class="btn-check btncheck9" data-check-value="اکتشاف" /><label class="btn btn-default" for="btncheck9">اکتشاف</label>
-                                                    <input type="checkbox" name="btncheck10" id="btncheck10" class="btn-check btncheck10" data-check-value="پذیرفته شدن" /><label class="btn btn-default" for="btncheck10">پذیرفته شدن</label>
-                                                    <input type="checkbox" name="btncheck11" id="btncheck11" class="btn-check btncheck11" data-check-value="کرامت" /><label class="btn btn-default" for="btncheck11">کرامت</label>
-                                                    <input type="checkbox" name="btncheck12" id="btncheck12" class="btn-check btncheck12" data-check-value="اصالت" /><label class="btn btn-default" for="btncheck12">اصالت</label>
-                                                    <input type="checkbox" name="btncheck13" id="btncheck13" class="btn-check btncheck13" data-check-value="قناعت" /><label class="btn btn-default" for="btncheck13">قناعت</label>
-                                                    <input type="checkbox" name="btncheck14" id="btncheck14" class="btn-check btncheck14" data-check-value="اعتبار" /><label class="btn btn-default" for="btncheck14">اعتبار</label>
-                                                    <input type="checkbox" name="btncheck15" id="btncheck15" class="btn-check btncheck15" data-check-value="دقت" /><label class="btn btn-default" for="btncheck15">دقت</label>
-                                                    <input type="checkbox" name="btncheck16" id="btncheck16" class="btn-check btncheck16" data-check-value="مشارکت" /><label class="btn btn-default" for="btncheck16">مشارکت</label>
-                                                    <input type="checkbox" name="btncheck17" id="btncheck17" class="btn-check btncheck17" data-check-value="صداقت" /><label class="btn btn-default" for="btncheck17">صداقت</label>
-                                                    <input type="checkbox" name="btncheck18" id="btncheck18" class="btn-check btncheck18" data-check-value="نظم" /><label class="btn btn-default" for="btncheck18">نظم</label>
-                                                    <input type="checkbox" name="btncheck19" id="btncheck19" class="btn-check btncheck19" data-check-value="امید" /><label class="btn btn-default" for="btncheck19">امید</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 column">
-                                            <div class="form-group">
-                                                <legend>از ارزش‌هایی که در زیر آمده ۳ ارزش رو که برات از همه مهم‌ترن انتخاب کن</legend>
-                                                <div class="btn-group btn-group-narrow" role="group" aria-label="Basic checkbox toggle button group">
-                                                    <input type="checkbox" name="btncheck20" id="btncheck20" class="btn-check btncheck20" data-check-value="مسئولیت" checked/><label class="btn btn-default" for="btncheck20">مسئولیت</label>
-                                                    <input type="checkbox" name="btncheck21" id="btncheck21" class="btn-check btncheck21" data-check-value="نوآوری" checked/><label class="btn btn-default" for="btncheck21">نوآوری</label>
-                                                    <input type="checkbox" name="btncheck22" id="btncheck22" class="btn-check btncheck22" data-check-value="توانمندی" /><label class="btn btn-default" for="btncheck22">توانمندی</label>
-                                                    <input type="checkbox" name="btncheck23" id="btncheck23" class="btn-check btncheck23" data-check-value="دقت" /><label class="btn btn-default" for="btncheck23">دقت</label>
-                                                    <input type="checkbox" name="btncheck24" id="btncheck24" class="btn-check btncheck24" data-check-value="نظم" /><label class="btn btn-default" for="btncheck24">نظم</label>
-                                                    <input type="checkbox" name="btncheck25" id="btncheck25" class="btn-check btncheck25" data-check-value="موفقیت" /><label class="btn btn-default" for="btncheck25">موفقیت</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </form>
-                                <div class="form-btn">
-                                    <button class="btn btn-prev">
-                                        <svg width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M9.66003 20.4201L16.18 13.9001C16.95 13.1301 16.95 11.8701 16.18 11.1001L9.66003 4.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                        مرحله قبل
-                                    </button>
-                                    <button class="btn btn-next">
-                                        مرحله بعد
-                                        <svg width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15.2501 20.4201L8.73009 13.9001C7.96009 13.1301 7.96009 11.8701 8.73009 11.1001L15.2501 4.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide main-slide" data-bullet="فرم سوالات">
-                            <div class="main-container form-container">
-                                <div class="form-heading">
-                                    <h2 class="title">فرم ثبت نام در کارگاه نگرش پروژه محور و مدیریت رویداد</h2>
-                                    <span class="notic">
-                                        <svg width="20" height="20" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2.5C6.49 2.5 2 6.99 2 12.5C2 18.01 6.49 22.5 12 22.5C17.51 22.5 22 18.01 22 12.5C22 6.99 17.51 2.5 12 2.5ZM11.25 8.5C11.25 8.09 11.59 7.75 12 7.75C12.41 7.75 12.75 8.09 12.75 8.5V13.5C12.75 13.91 12.41 14.25 12 14.25C11.59 14.25 11.25 13.91 11.25 13.5V8.5ZM12.92 16.88C12.87 17.01 12.8 17.11 12.71 17.21C12.61 17.3 12.5 17.37 12.38 17.42C12.26 17.47 12.13 17.5 12 17.5C11.87 17.5 11.74 17.47 11.62 17.42C11.5 17.37 11.39 17.3 11.29 17.21C11.2 17.11 11.13 17.01 11.08 16.88C11.03 16.76 11 16.63 11 16.5C11 16.37 11.03 16.24 11.08 16.12C11.13 16 11.2 15.89 11.29 15.79C11.39 15.7 11.5 15.63 11.62 15.58C11.86 15.48 12.14 15.48 12.38 15.58C12.5 15.63 12.61 15.7 12.71 15.79C12.8 15.89 12.87 16 12.92 16.12C12.97 16.24 13 16.37 13 16.5C13 16.63 12.97 16.76 12.92 16.88Z" fill="#FF5858"/>
-                                        </svg>
-                                        جواب دادن به این سوالات اجباری نیست اما پاسخ دادن به اون‌ها تاثیر بسیار زیادی روی طراحی هدفمند مباحث کارگاه برای مخاطبین و جنس دغدغه اونها داره. 
-                                    </span>
-                                </div>
-                                <form method="get" class="fourmind-form form-step-five">
-                                    <div class="row">
-                                        <div class="col-12 column">
-                                            <div class="form-group">
-                                                <label for="textarea8">چرا به مدیریت پروژه‌های برگزاری رویداد علاقه داری؟‌</label>
-                                                <textarea name="textarea8" id="textarea8" class="form-control textarea textarea8" rows="2"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 column">
-                                            <div class="form-group">
-                                                <label for="textarea9">مواجهه با استرس و اضطراب را در خود چگونه ارزیابی می‌کنی؟</label>
-                                                <textarea name="textarea9" id="textarea9" class="form-control textarea textarea9" rows="2"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 column">
-                                            <div class="form-group">
-                                                <label for="textarea10">اثر دومینو یا ویژگی دومینو از دید تو چیست؟</label>
-                                                <textarea name="textarea10" id="textarea10" class="form-control textarea textarea10" rows="2"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </form>
-                                <div class="form-btn">
-                                    <button class="btn btn-prev">
-                                        <svg width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M9.66003 20.4201L16.18 13.9001C16.95 13.1301 16.95 11.8701 16.18 11.1001L9.66003 4.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                        مرحله قبل
-                                    </button>
-                                    <button class="btn btn-next">
-                                        مرحله بعد
-                                        <svg width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15.2501 20.4201L8.73009 13.9001C7.96009 13.1301 7.96009 11.8701 8.73009 11.1001L15.2501 4.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide main-slide" data-bullet="هزینه">
-                            <div class="main-container form-container">
-                                <div class="form-heading">
-                                    <h2 class="title">فرم ثبت نام در کارگاه تفکر انتقادی</h2>
-                                    <span class="notic">
+                                    <h2 class="title coursse-title">عنوان فرم</h2>
+                                    <span class="notic d-none">
                                         <svg width="20" height="20" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M12 2.5C6.49 2.5 2 6.99 2 12.5C2 18.01 6.49 22.5 12 22.5C17.51 22.5 22 18.01 22 12.5C22 6.99 17.51 2.5 12 2.5ZM11.25 8.5C11.25 8.09 11.59 7.75 12 7.75C12.41 7.75 12.75 8.09 12.75 8.5V13.5C12.75 13.91 12.41 14.25 12 14.25C11.59 14.25 11.25 13.91 11.25 13.5V8.5ZM12.92 16.88C12.87 17.01 12.8 17.11 12.71 17.21C12.61 17.3 12.5 17.37 12.38 17.42C12.26 17.47 12.13 17.5 12 17.5C11.87 17.5 11.74 17.47 11.62 17.42C11.5 17.37 11.39 17.3 11.29 17.21C11.2 17.11 11.13 17.01 11.08 16.88C11.03 16.76 11 16.63 11 16.5C11 16.37 11.03 16.24 11.08 16.12C11.13 16 11.2 15.89 11.29 15.79C11.39 15.7 11.5 15.63 11.62 15.58C11.86 15.48 12.14 15.48 12.38 15.58C12.5 15.63 12.61 15.7 12.71 15.79C12.8 15.89 12.87 16 12.92 16.12C12.97 16.24 13 16.37 13 16.5C13 16.63 12.97 16.76 12.92 16.88Z" fill="#FF5858"/>
                                         </svg>

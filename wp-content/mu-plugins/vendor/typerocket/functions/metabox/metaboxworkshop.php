@@ -4,6 +4,9 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 // Meta Box: metabox-workshop - متادیتای کارگاه
 
+$countReservation = new \App\Controllers\ReservationController;
+$countReservation = $countReservation::countReservation();
+
 // Control core classes for avoid errors
 if( class_exists( 'CSF' ) ) {
 
@@ -31,7 +34,9 @@ if( class_exists( 'CSF' ) ) {
                 'id'          => 'capacity',
                 'type'        => 'number',
                 'title'       => 'ظرفیت دوره',
+                'desc'        => 'ثبت نام شده: ' . "<span style='color:red;'>" . $countReservation . "</span> نفر",
                 'unit'        => 'نفر',
+                'default'     => 0
             ),
 
             array(

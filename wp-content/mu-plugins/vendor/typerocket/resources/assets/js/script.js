@@ -28,9 +28,13 @@ var swiper = new Swiper(".fourmindSwiper", {
             btnRegister.forEach((e) => {
                 e.addEventListener("click", () => {
                     let courseID = e.getAttribute("data-courseID");
+                    let courseTitle = e.getAttribute("data-courseTitle");
                     let courseDate = e.getAttribute("data-courseDate");
+                    let courseQuiz = e.getAttribute("data-courseQuiz");
                     setCourseID(courseID);
-                    setCourseDate(courseDate);
+                    setCourseTitle(courseTitle);
+                    setCourseDate(courseTitle, courseDate);
+                    setCourseQuiz(courseQuiz);
                     swiper.slideNext();
                 });
             });
@@ -122,19 +126,28 @@ let setCourseID = (setCourseID) => {
     setCourseIDInput.value = setCourseID;
 }
 
-let setCourseDate = (setCourseDate) => {
-    var newFormCheck;
-    let setCourseDateInput = document.querySelector(".form-step-one .course-date");
-    // setCourseDateInput.value = setCourseDate;
+let setCourseQuiz = (setCourseQuiz) => {
+    let setQuestionsTitle = document.querySelectorAll(".form-step-two label");
+    arrayQuestions = setCourseQuiz.split(",");
 
-    arrayFormCheck = setCourseDate.split(",")
-    arrayFormCheck.forEach( (item) => {
-        
-        var div = document.createElement("div");
-        var divElement = div.setAttribute('class', 'form-check');
+    for (let index = 0; index < setQuestionsTitle.length; index++) {
+        setQuestionsTitle[index].innerHTML = arrayQuestions[index];
+    }
+}
 
+let setCourseTitle = (setCourseTitle) => {
+    let setFormHeading = document.querySelectorAll(".form-heading .coursse-title");
+    setFormHeading.forEach( (e) => {
+        e.innerHTML = setCourseTitle;
     });
-    // newFormCheck = setCourseDateInput.replaceWith(divElement);
+}
+
+let setCourseDate = (courseTitle, courseDate) => {
+    let setCourseTitle = document.querySelector(".info .course-title");
+    let setCourseDate = document.querySelector(".info .course-date");
+
+    setCourseTitle.innerHTML = courseTitle;
+    setCourseDate.innerHTML = courseDate;
     
 }
 
@@ -146,7 +159,7 @@ let validateForm = (swiper) => {
     let statusField = false;
     let statusTel = false;
     let statusEmail = false;
-    let statusDate = false;
+    // let statusDate = false;
 
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 	var telPattern = /^0\d{10}$/;
@@ -159,7 +172,7 @@ let validateForm = (swiper) => {
     let field = formFeilds.querySelector(".field");
     let tel = formFeilds.querySelector(".tel");
     let email = formFeilds.querySelector(".email");
-    let date = formFeilds.querySelector(".date:checked").value;
+    // let date = formFeilds.querySelector(".date:checked").value;
 
     let fullNameValue = fullName.value;
     let jobValue = job.value;
