@@ -45,23 +45,7 @@ if( class_exists( 'CSF' ) ) {
                 'type'  => 'text',
                 'title' => 'تاریخ دوره',
             ),
-
-            array(
-                'id'     => 'meetings',
-                'type'   => 'repeater',
-                'title'  => 'تاریخ جلسات',
-                'fields' => array(
               
-                  array(
-                    'id'    => 'clock',
-                    'type'  => 'text',
-                    'title' => 'روز / ساعت'
-                  ),
-              
-                ),
-              ),
-              
-            
             array(
                 'id'    => 'time',
                 'type'  => 'text',
@@ -69,9 +53,31 @@ if( class_exists( 'CSF' ) ) {
             ),
 
             array(
-                'id'    => 'link',
-                'type'  => 'text',
-                'title' => 'لینک دوره',
+                'id'     => 'questions',
+                'type'   => 'repeater',
+                'title'  => 'سوالات کارگاه',
+                'min'    => 3,
+                'max'    => 3,
+                'fields' => array(
+              
+                    array(
+                    'id'    => 'question',
+                    'type'  => 'text',
+                    'title' => 'عنوان سوال'
+                    ),
+              
+                ),
+                'default'   => array(
+                    array(
+                        'question' => 'عنوان سوال اول خود را وارد کنید',
+                    ),
+                    array(
+                        'question' => 'عنوان سوال دوم خود را وارد کنید',
+                    ),
+                    array(
+                        'question' => 'عنوان سوال سوم خود را وارد کنید',
+                    )
+                )
             ),
 
         )

@@ -12,9 +12,9 @@ function columns_workshop($columns) {
     unset( $columns['title'] ); 
     unset( $columns['date'] ); 
     
-    $columns['ID'] = 'شناسه';
+    // $columns['ID'] = 'شناسه';
     $columns['title'] = $title;
-    $columns['info'] = 'اطلاعات';
+    $columns['info'] = 'توضیحات';
     $columns['date'] = $date;
     return $columns;
 
@@ -34,33 +34,33 @@ add_filter('manage_edit-workshop_sortable_columns', 'columns_workshop_sortable')
 function columns_workshop_data($column, $post_id) {
 
     if ($column == 'ID') {
-        
         echo $post_id;
-
 	}
 
     if ($column == 'info') {
         
-        $meta = get_post_meta( $post_id, 'workshopInfo', true ); //var_dump($meta);
-        $count = count($meta);
-        if( $count > 0 ) {
+        // $meta = get_post_meta( $post_id, 'workshopInfo', true ); //var_dump($meta);
+        // $count = count($meta);
+        // if( $count > 0 ) {
 
-            $i = 1;
-            foreach( $meta as $key => $value ) {
+        //     $i = 1;
+        //     foreach( $meta as $key => $value ) {
                 
-                if( ! empty( $value ) ) {
-                    if( ! is_array( $value ) ) {
-                        echo $value;
-                    }
-                    if( $i < $count ) {
-                        echo " | ";
-                    }
-                }
-                $i++;
+        //         if( ! empty( $value ) ) {
+        //             if( ! is_array( $value ) ) {
+        //                 echo $value;
+        //             }
+        //             if( $i < $count ) {
+        //                 echo " | ";
+        //             }
+        //         }
+        //         $i++;
                 
-            }
+        //     }
 
-        }
+        // }
+
+        echo get_the_excerpt($post_id);
 
 	}
 

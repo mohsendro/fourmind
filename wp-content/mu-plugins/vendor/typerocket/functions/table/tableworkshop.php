@@ -56,12 +56,12 @@ class Table_Workshop_List_Table extends WP_List_Table {
 
           $columns = array(
                 // 'cb'           => '<input type="checkbox" />',
-                'ID'          => 'شناسه',
-                'course_id'   => 'شناسه کارگاه',
+                // 'ID'          => 'شناسه',
+                'course_id'   => 'کارگاه',
                 'full_name'   => 'نام',
                 'job'         => 'شغل',
-                'tel'         => 'تلفن' ,
-                'email'       => 'ایمیل',
+                'contact'     => 'تماس' ,
+                'price'       => 'مبلغ',
                 'more'        => '',
           );
           return $columns;
@@ -142,13 +142,18 @@ class Table_Workshop_List_Table extends WP_List_Table {
                 return $item['full_name'];                       
 
             case 'job':
-                return $item['job'];
+                return "شغل: " . $item['job'] . "<br>" . "رشته مورد علاقه: " . $item['field'];
 
-            case 'tel':
-                return $item['tel'];
+            case 'contact':
+                return "تلفن: " . $item['tel'] . "<br>" . "ایمیل: " . $item['email'];
 
-            case 'email':
-                return $item['email'];
+            case 'price':
+                if( $item['status'] ) {
+                    $status = "<span style='color:green;'>پرداخت شده</span>";
+                } else {
+                    $status = "<span style='color:red;'>پرداخت نشده</span>";
+                }
+                return "مبلغ: " . $item['price'] . "<br>" . "وضعیت: " . $status;
 
             case 'more':
                 return "<a href='". admin_url('admin.php?page=workshops&ID='.$item['ID']) ."'>جزئیات</a>";

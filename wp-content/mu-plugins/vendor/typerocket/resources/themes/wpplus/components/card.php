@@ -73,7 +73,6 @@
             <?php endif; ?>
         </dev>
         <div class="links">
-            <button class="btn btn-introduce" onclick="introduceCallback('<?php echo $workshop->meta->workshopInfo['link']; ?>');">معرفی به دوستان</button>
             <button class="btn btn-register" data-courseID = "<?php echo $workshop->ID; ?>" data-courseDate = "<?php echo $date; ?>">ثبت نام</button>
         </div>
     </div>

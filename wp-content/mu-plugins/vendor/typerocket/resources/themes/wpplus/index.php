@@ -85,7 +85,7 @@
                                                 <input type="hidden" name="course-id" id="course-id" class="form-control course-id" value="0">
                                             </div>
                                         </div>
-                                        <div class="col-12 col-md-6 column">
+                                        <div class="col-12 col-md-12 column">
                                             <div class="form-group">
                                                 <div class="danger-message full-name-message">
                                                     <svg width="15" height="15" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,38 +143,6 @@
                                                 </div>
                                                 <label for="email">ایمیل<span class="star">*</span></label>
                                                 <input type="text" name="email" id="email" class="form-control email" require>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-6 column">
-                                            <div class="form-group form-group-radio">
-                                                <legend>انتخاب تاریخ کارگاه<span class="star">*</span></legend>
-
-                                                <div class="course-date">
-                                                    <div class="form-check">
-                                                        <input type="radio" name="date" id="date99" class="form-check-input date" value="option99" checked>
-                                                        <label for="date99">زمان الان</label>
-                                                    </div>
-                                                </div>
-
-
-                                                <?php // $num = 1; ?>
-                                                <?php // foreach( $workshop->meta->workshopInfo['meetings'] as $date ): ?>
-                                                    <?php
-                                                        // if( $num === 1 ) {
-                                                        //     $checked = "checked";
-                                                        // } else {
-                                                        //     $checked = "";
-                                                        // }
-                                                    ?>
-                                                    <!-- <div class="form-check">
-                                                        <input type="radio" name="date" id="date<?php // echo $num; ?>" class="form-check-input date" value="option<?php // echo $num; ?>" <?php // echo $checked; ?>>
-                                                        <label for="date<?php // echo $num; ?>"><?php // echo $date['clock']; ?></label>
-                                                    </div> -->
-                                                    <?php // $num++; ?>
-                                                <?php // endforeach; ?>
-
-
-
                                             </div>
                                         </div>
                                     </div>  
