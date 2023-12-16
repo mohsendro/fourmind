@@ -8,10 +8,10 @@ function workshop_ajax_handle_function() {
 
     check_ajax_referer( 'workshop_form_nonce', 'submitted_nonce' );  // This function will die if submitted_nonce is not correct.
 
-    // $questionsList = [];
-    // $questionsList[] = [$_POST['label1'] => sanitize_text_field($_POST['question1'])];
-    // $questionsList[] = [$_POST['label2'] => sanitize_text_field($_POST['question2'])];
-    // $questionsList[] = [$_POST['label3'] => sanitize_text_field($_POST['question3'])];
+    $questionsList = [];
+    $questionsList[] = [$_POST['label1'] => sanitize_text_field($_POST['question1'])];
+    $questionsList[] = [$_POST['label2'] => sanitize_text_field($_POST['question2'])];
+    $questionsList[] = [$_POST['label3'] => sanitize_text_field($_POST['question3'])];
 
     $model = new App\Models\Reservation();
     $model->course_id = sanitize_text_field($_POST['courseID']);
@@ -20,9 +20,9 @@ function workshop_ajax_handle_function() {
     $model->field = sanitize_text_field($_POST['field']);
     $model->tel = sanitize_text_field($_POST['tel']);
     $model->email = sanitize_text_field($_POST['email']);
-    // $model->questions = $questionsList;
-    // $model->price = $_POST['price'];
-    // $model->status = 0;
+    $model->questions = $questionsList;
+    $model->price = $_POST['price'];
+    $model->status = 0;
     $model->save(); 
 
     $response = array(

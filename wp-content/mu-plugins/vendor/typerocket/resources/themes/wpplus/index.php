@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide main-slide" data-hash="step2" data-bullet="کارگاه‌ها">
+                        <div class="swiper-slide main-slide" data-bullet="کارگاه‌ها">
                             <div class="main-container">
                                 <!-- Slider inside container -->
                                 <div class="swiper cardSwiper">
@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide main-slide" data-hash="step3" data-bullet="فرم تماس">
+                        <div class="swiper-slide main-slide" data-bullet="فرم تماس">
                             <div class="main-container form-container">
                                 <div class="form-heading">
                                     <h2 class="title coursse-title">عنوان فرم</h2>
@@ -163,7 +163,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide main-slide" data-hash="step4" data-bullet="فرم سوالات">
+                        <div class="swiper-slide main-slide" data-bullet="فرم سوالات">
                             <div class="main-container form-container">
                                 <div class="form-heading">
                                     <h2 class="title coursse-title">عنوان فرم</h2>
@@ -212,7 +212,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide main-slide" data-hash="step5" data-bullet="هزینه">
+                        <div class="swiper-slide main-slide" data-bullet="هزینه">
                             <div class="main-container form-container">
                                 <div class="form-heading">
                                     <h2 class="title coursse-title">عنوان فرم</h2>

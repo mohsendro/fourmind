@@ -14,64 +14,59 @@ if( $WorkshopController ) {
         switch ($key) {
             case 'ID':
                 $title = 'شناسه';
+                $value = $value;
                 break;
             case 'course_id':
                 $title = 'شناسه کارگاه';
+                $value = $value;
                 break;
             case 'full_name':
                 $title = 'نام و نام خانوادگی';
+                $value = $value;
                 break;
             case 'job':
                 $title = 'شغل';
+                $value = $value;
                 break;
             case 'field':
                 $title = 'رشته مورد علاقه';
+                $value = $value;
                 break;
             case 'tel':
                 $title = 'تلفن تماس';
+                $value = $value;
                 break;
             case 'email':
                 $title = 'ایمیل';
+                $value = $value;
                 break;
-            case 'date':
-                $title = 'تاریخ جلسه';
-                break;
-            case 'textarea1':
-                $title = 'در مورد چه چیزهایی سال‌ها خیلی اشتباه فکر می‌کردی؟';
+            case 'questions':
+                $title = 'سوالات';
+                $values = unserialize($value);
+                if( is_array($values) ) {
+                    $value = '';
+                    foreach ($values as $item) {
+                        foreach ($item as $key => $val) {
+                            $value .= "<br>";
+                            $value .= $key . " : " . $val;
+                        }
+                    }
+                } else {
+                    $value = '';
+                }
                 break; 
-            case 'textarea2':
-                $title = 'چطور میتونی متوجه بشی که افکارت کارآمد یا ناکارآمد هستند؟';
-                break;
-            case 'textarea3':
-                $title = 'چه زمان‌ها و در جه موقعیت‌هایی تونستی به اشتباهاتت پی ببری؟';
-                break;
-            case 'textarea4':
-                $title = 'چه خاطره‌ای یادت میاد که روی تیم‌ورک بودنت تاثیر منفی گذاشته؟';
-                break;
-            case 'textarea5':
-                $title = 'یک تجربه شخصی از تیم‌ورک رو برامون بنویس';
-                break;
-            case 'textarea6':
-                $title = 'به نظرت چرا در ایران در کار تیمی ضعیف هستیم؟';
-                break;
-            case 'textarea7':
-                $title = 'یک رابطه پایدار از دید تو چگونه است؟';
-                break;
-            case 'textarea8':
-                $title = 'چرا به مدیریت پروژه‌های برگزاری رویداد علاقه داری؟‌';
-                break;
-            case 'textarea9':
-                $title = 'مواجهه با استرس و اضطراب را در خود چگونه ارزیابی می‌کنی؟';
-                break;   
-            case 'textarea10':
-                $title = 'اثر دومینو یا ویژگی دومینو از دید تو چیست؟';
-                break;
-            case 'checkList':
-                $title = 'ارزش‌ها';
-                break;
             case 'price':
                 $title = 'هزینه کارگاه';
-                break;                
+                $value = $value . ' تومان';
+                break;        
+            case 'status':
+                $title = 'وضعیت';
+                if( $value ) {
+                    $value = "<span style='color:green;'>پرداخت شده</span>";
+                } else {
+                    $value = "<span style='color:red;'>پرداخت نشده</span>";
+                }
+                break;         
             default:
                 $title = '';
                 break;

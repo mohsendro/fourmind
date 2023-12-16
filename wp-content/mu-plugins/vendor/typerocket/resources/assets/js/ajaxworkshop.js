@@ -10,9 +10,9 @@ function checkoutCallbackAjaxJs() {
     // let date = formStepOne.querySelector('.date').value;
 
     let formStepTwo = document.querySelector('.form-step-two');
-    let label1 = formStepTwo.querySelectorAll('label')[0];
-    let label2 = formStepTwo.querySelectorAll('label')[1];
-    let label3 = formStepTwo.querySelectorAll('label')[2];
+    let label1 = formStepTwo.querySelectorAll('label')[0].innerHTML;
+    let label2 = formStepTwo.querySelectorAll('label')[1].innerHTML;
+    let label3 = formStepTwo.querySelectorAll('label')[2].innerHTML;
     let question1 = formStepTwo.querySelector('.question1').value;
     let question2 = formStepTwo.querySelector('.question2').value;
     let question3 = formStepTwo.querySelector('.question3').value;
