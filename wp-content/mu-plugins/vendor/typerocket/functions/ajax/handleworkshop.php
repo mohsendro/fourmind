@@ -25,6 +25,10 @@ function workshop_ajax_handle_function() {
     $model->status = 0;
     $model->save(); 
 
+    // Include codes from in snippets folder
+    send_mail($_POST['email'], $_POST['fullName']);
+    send_sms($_POST['tel'], $_POST['fullName']);
+
     $response = array(
         'success'   => 'درخواست با موفقیت ارسال شد',
     );

@@ -223,8 +223,10 @@ body {
 .fourmind {
     width: 100%;
     height: 100vh;
-    background-image: url(../img/background.png);
-    background-size: cover;
+    background-color: #020102;
+    /* background-image: url(../img/background.png); */
+    background-image: url(../video/bg.gif);
+    background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
