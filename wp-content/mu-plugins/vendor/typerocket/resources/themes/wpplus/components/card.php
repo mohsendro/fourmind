@@ -94,8 +94,30 @@
                 <?php endif; ?>
             </dev>
             <div class="links">
+                <?php if( isset($workshop->meta->workshopInfo['video']) ): ?>
+                    <button class="btn btn-introduce" data-bs-toggle="modal" data-bs-target="#videoPopup<?php echo $workshop->ID; ?>">ویدئو معرفی</button>
+                <?php endif; ?>
                 <button class="btn btn-register" data-courseID = "<?php echo $workshop->ID; ?>" data-courseTitle = "<?php echo $workshop->post_title; ?>" data-courseDate = "<?php echo $workshop->meta->workshopInfo['date']; ?>" data-courseQuiz = "<?php echo $quiz; ?>">ثبت نام</button>
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <?php if( isset($workshop->meta->workshopInfo['video']) ): ?>
+    <div class="modal fade" id="videoPopup<?php echo $workshop->ID; ?>"  tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <?php echo $workshop->post_title; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video class="embed-responsive-item" muted loop controls src="<?php echo $workshop->meta->workshopInfo['video']["url"]; ?>" type="video/mp4" width="100%" height="auto">
+                        <img src="https://storage.googleapis.com/cms-storage-bucket/a667e994fc2f3e85de36.png">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
 <?php endif; ?>

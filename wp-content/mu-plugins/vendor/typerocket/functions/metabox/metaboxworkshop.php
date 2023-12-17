@@ -58,6 +58,14 @@ if( class_exists( 'CSF' ) ) {
             ),
 
             array(
+                'id'    => 'video',
+                'type'  => 'media',
+                'title' => 'ویدئو معرفی',
+                'library' => 'video',
+                'preview' => false
+            ),
+
+            array(
                 'id'     => 'questions',
                 'type'   => 'repeater',
                 'title'  => 'سوالات کارگاه',
