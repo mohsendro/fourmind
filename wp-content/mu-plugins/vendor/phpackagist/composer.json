@@ -7,7 +7,9 @@
             "email": "mohsendroo@yahoo.com"
         }
     ],
-    "require": {},
+    "require": {
+        "kavenegar/php": "*"
+    },
     "autoload": {
         "psr-4": {
             "App\\": "src/"
