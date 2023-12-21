@@ -45,11 +45,13 @@ var swiper = new Swiper(".fourmindSwiper", {
             btnNext.forEach((e) => {
                 e.addEventListener("click", () => {
                     validateForm(swiper);
+                    rangeCallback();
                 });
             });
             btnPrev.forEach((e) => {
                 e.addEventListener("click", () => {
-                    swiper.slidePrev();
+                    // swiper.slidePrev();
+                    swiper.slideTo( swiper.activeIndex - 1 );
                 });
             }); 
 
@@ -89,11 +91,11 @@ var card = new Swiper(".cardSwiper", {
     breakpoints: {
         0: {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 15,
         },
         576: {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 15,
         },
         768: {
             slidesPerView: 2,
@@ -247,9 +249,18 @@ let validateForm = (swiper) => {
 
 }
 
+function ToRial(str) {
+    str = str.replace(/\,/g, '');
+    var objRegex = new RegExp('(-?[0-9]+)([0-9]{3})');     
+    while (objRegex.test(str)) {
+        str = str.replace(objRegex, '$1,$2');
+    }
+    return str;
+}
+
 let rangeCallback = (event) => {
     var wallet = document.querySelector(".wallet");
     var price = wallet.querySelector(".price");
     var rangeValue = document.querySelector('.range').value;
-    price.innerHTML = rangeValue + " تومان";
+    price.innerHTML = ToRial(rangeValue) + " تومان";
 }
