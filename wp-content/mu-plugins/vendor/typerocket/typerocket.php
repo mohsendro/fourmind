@@ -59,3 +59,6 @@ require_once plugin_dir_path(__FILE__) . 'functions/column/columnworkshop.php';
 // Ajax Handlers
 include plugin_dir_path(__FILE__) . 'functions/ajax/handleworkshop.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/ajax/handlesample.php';
+
+
+// send_sms("09214500936", "asdasda");

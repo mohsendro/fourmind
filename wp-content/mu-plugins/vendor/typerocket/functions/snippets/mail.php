@@ -15,14 +15,14 @@ function send_mail($mail, $full_name) {
 
     // SMTP configuration
     $phpmailer->isSMTP();                    
-    $phpmailer->Host = 'mail.fourmind.co';
+    $phpmailer->Host = 'lh372.irandns.com';
     $phpmailer->SMTPAuth = true;
     $phpmailer->Username = 'smtp@fourmind.co';
     $phpmailer->Password = 'FvKr37tNkwURTLEBsjkN';
     $phpmailer->SMTPSecure = 'tls';
     $phpmailer->Port = 587;
 
-    $phpmailer->setFrom('smtp@fourmind.co', 'CodexWorld');
+    $phpmailer->setFrom('smtp@fourmind.co', 'Fourmind');
 
     // Add a recipient
     $phpmailer->addAddress($mail);
@@ -35,7 +35,7 @@ function send_mail($mail, $full_name) {
     $phpmailer->isHTML(true);
 
     // Email subject
-    $phpmailer->Subject = 'ایمیل خوش آمد گویی fourmind';
+    $phpmailer->Subject = 'Welcome To Fourmind';
 
     // Email body content
     $mailContent = $full_name . ' عزیز، کارگاه شما با موفقیت رزرو شد';
@@ -51,12 +51,12 @@ function send_mail($mail, $full_name) {
     //////////////////////////////////////////////////////////////////////
 
     // Custom WP Mail Function
-    $to = array($mail);
-    $subject   = 'ایمیل خوش آمد گویی fourmind';
-    $headers[] = 'Content-Type: text/html; charset=UTF-8';
-    $headers[] = 'From: فورمایند';
-    $message   = $full_name . ' عزیز، کارگاه شما با موفقیت رزرو شد';
+    // $to = array($mail);
+    // $subject   = 'ایمیل خوش آمد گویی fourmind';
+    // $headers[] = 'Content-Type: text/html; charset=UTF-8';
+    // $headers[] = 'From: فورمایند';
+    // $message   = $full_name . ' عزیز، کارگاه شما با موفقیت رزرو شد';
 
-    wp_mail( $to, $subject, $message, $headers );
+    // wp_mail( $to, $subject, $message, $headers );
 
 }
