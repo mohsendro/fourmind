@@ -28,9 +28,11 @@ function workshop_ajax_handle_function() {
     // Include codes from in snippets folder
     send_mail($_POST['email'], $_POST['fullName']);
     send_sms($_POST['tel'], $_POST['fullName']);
+    $test = zarin_gate();
 
     $response = array(
         'success'   => 'درخواست با موفقیت ارسال شد',
+        'message'   => $test
     );
 
     wp_send_json_success( $response, 200 );

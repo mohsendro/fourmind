@@ -389,8 +389,8 @@ body {
     max-height: 500px;
     background: rgba( 255, 255, 255, 0.15 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 30px );
-    -webkit-backdrop-filter: blur( 5px );
+    backdrop-filter: blur( 50px );
+    -webkit-backdrop-filter: blur( 50px );
     border-radius: 8px;
     z-index: 2;
     overflow-y: scroll;
@@ -424,7 +424,7 @@ body {
     font-weight: 300;
     line-height: 25px;
     text-align: center;
-    color: #808080;
+    color: #FFFFFF;
 }
 
 .card-slide .details {
@@ -452,7 +452,7 @@ body {
 .card-slide .details strong {}
 
 .card-slide .details span {
-    color: #808080;
+    color: #FFFFFF;
 }
 
 .card-slide .desc {
@@ -479,7 +479,7 @@ body {
     font-weight: 300;
     line-height: 20px;
     text-align: justify;
-    color: #808080;
+    color: #FFFFFF;
 }
 
 .card-slide .links {
@@ -581,8 +581,8 @@ body {
     gap: 25px;
     background: rgba( 255, 255, 255, 0.15 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 5px );
-    -webkit-backdrop-filter: blur( 5px );
+    backdrop-filter: blur( 50px );
+    -webkit-backdrop-filter: blur( 50px );
     border-radius: 8px;
     overflow-y: scroll;
     padding: 30px 100px;

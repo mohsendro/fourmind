@@ -22,6 +22,7 @@ require_once plugin_dir_path(__FILE__) . 'functions/snippets/enqueue.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/image-size.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/mail.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/sms.php';
+require_once plugin_dir_path(__FILE__) . 'functions/snippets/gate.php';
 
 // Post Types
 require_once plugin_dir_path(__FILE__) . 'functions/posttype/page.php';
@@ -59,6 +60,3 @@ require_once plugin_dir_path(__FILE__) . 'functions/column/columnworkshop.php';
 // Ajax Handlers
 include plugin_dir_path(__FILE__) . 'functions/ajax/handleworkshop.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/ajax/handlesample.php';
-
-
-// send_sms("09214500936", "asdasda");
