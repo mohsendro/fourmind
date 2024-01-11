@@ -66,12 +66,10 @@ function checkoutCallbackAjaxJs() {
             price: price,
         },
         success: function (response) {
-            // alert(response.data.success);
-            console.log(response.data.message);
+            window.location.replace("https://www.zarinpal.com/pg/StartPay/" + response.data.authority);
         },
         error: function (response) {
-            // alert('Error retrieving the information: ' + response.status + ' ' + response.statusText);
-            // console.log('ree');
+            alert('Error retrieving the information: ' + response.status + ' ' + response.statusText);
         }
     });
 

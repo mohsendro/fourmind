@@ -337,7 +337,7 @@ body {
 }
 
 .cardSwiper::after {
-    content: "";
+    /* content: ""; */
     width: 150px;
     height: 100%;
     position: absolute;
@@ -371,6 +371,7 @@ body {
     object-position: top;
     border-radius: 8px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .card-slide img::after {
@@ -797,6 +798,7 @@ body {
 
 .fourmind-form .form-range input {
     width: calc(100% - 410px);
+    padding: 0;
 }
 
 .fourmind-form .form-range .wallet {
@@ -897,6 +899,15 @@ body {
     font-size: 16px;
     font-weight: 900;
     color: #D6FF93;
+}
+
+.end-message .course-title-error {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    color: #FF5858;
 }
 
 .end-message .course-date {

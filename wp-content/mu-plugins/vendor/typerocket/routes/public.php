@@ -52,3 +52,6 @@
 // Search
 // tr_route()->get()->match('/search')->do('page@SearchController');
 // tr_route()->get()->match('/search/([^\/]+)', ['param'])->do('archive@SearchController');
+
+// Custom Route
+tr_route()->get()->match('/message')->do('message@FronPageController');

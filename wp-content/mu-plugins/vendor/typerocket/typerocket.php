@@ -23,6 +23,7 @@ require_once plugin_dir_path(__FILE__) . 'functions/snippets/image-size.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/mail.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/sms.php';
 require_once plugin_dir_path(__FILE__) . 'functions/snippets/gate.php';
+require_once plugin_dir_path(__FILE__) . 'functions/snippets/verify.php';
 
 // Post Types
 require_once plugin_dir_path(__FILE__) . 'functions/posttype/page.php';

@@ -32,3 +32,6 @@ body.rtl, body.rtl .press-this a.wp-switch-editor,#danafy-list-plugins, #danafy-
 .csf-nav-normal+.csf-content {
   margin-left: 0!important;
 }
+.csf-field-spinner .ui-spinner input {
+  min-width: 150px;
+}

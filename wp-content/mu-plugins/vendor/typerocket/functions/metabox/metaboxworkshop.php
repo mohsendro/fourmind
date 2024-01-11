@@ -93,7 +93,37 @@ if( class_exists( 'CSF' ) ) {
                 )
             ),
 
+            array(
+                'id'        => 'price',
+                'type'      => 'fieldset',
+                'title'     => 'قیمت دوره',
+                'fields'    => array(
+                  array(
+                    'id'    => 'min',
+                    'type'  => 'spinner',
+                    'title' => 'حداقل',
+                    'unit'  => 'تومان',
+                    'min'     => 1000000,
+                    'max'     => 10000000,
+                    'default' => 1000000,
+                    'step'    => 500000,
+                  ),
+                  array(
+                    'id'    => 'max',
+                    'type'  => 'spinner',
+                    'title' => 'حداکثر',
+                    'unit'  => 'تومان',
+                    'min'     => 1000000,
+                    'max'     => 10000000,
+                    'default' => 10000000,
+                    'step'    => 500000,
+                  ),
+                ),
+                
+              ),              
+
         )
     ) );
   
 }
+?>

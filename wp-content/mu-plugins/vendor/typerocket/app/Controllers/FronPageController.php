@@ -56,4 +56,22 @@ class FronPageController extends WPPostController
 
         return tr_view('front-page', compact('posts', 'count', 'total_page', 'current_page') );
     }
+
+
+    public function message(Post $post, Option $option)
+    {
+
+        $where_option = [
+            [
+                'column'   => 'option_name',
+                'operator' => '=',
+                'value'    => 'posts_per_page'
+            ]
+        ];
+        $option = $option->find()->where($where_option)->select('option_value')->get()->toArray();
+        $option = $option[0]['option_value'];
+        
+        return tr_view('message');
+
+    }
 }

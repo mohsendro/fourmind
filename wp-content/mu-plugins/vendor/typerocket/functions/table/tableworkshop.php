@@ -153,7 +153,7 @@ class Table_Workshop_List_Table extends WP_List_Table {
                 } else {
                     $status = "<span style='color:red;'>پرداخت نشده</span>";
                 }
-                return "مبلغ: " . $item['price'] . "<br>" . "وضعیت: " . $status;
+                return "مبلغ: " . $item['price'] . "<br>" . "شناسه پرداخت: " . $item['authority'] . "<br>" . "وضعیت: " . $status;
 
             case 'more':
                 return "<a href='". admin_url('admin.php?page=workshops&ID='.$item['ID']) ."'>جزئیات</a>";

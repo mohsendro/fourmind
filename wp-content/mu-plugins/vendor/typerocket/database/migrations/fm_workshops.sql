@@ -37,6 +37,7 @@ CREATE TABLE `fm_workshops` (
   `email` text NOT NULL,
   `questions` text NOT NULL,
   `price` int(255) NOT NULL,
+  `authority` text NOT NULL,
   `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 

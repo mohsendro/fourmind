@@ -12,6 +12,13 @@ function workshop_ajax_handle_function() {
     $questionsList[] = [$_POST['label1'] => sanitize_text_field($_POST['question1'])];
     $questionsList[] = [$_POST['label2'] => sanitize_text_field($_POST['question2'])];
     $questionsList[] = [$_POST['label3'] => sanitize_text_field($_POST['question3'])];
+    
+    // Include codes from in snippets folder
+    $authority = zarin_gate($_POST['email'], $_POST['tel'], $_POST['price']);
+    $response = array(
+        'authority'   => $authority,
+        'success'   => 'درخواست با موفقیت ارسال شد',
+    );
 
     $model = new App\Models\Reservation();
     $model->course_id = sanitize_text_field($_POST['courseID']);
@@ -22,22 +29,18 @@ function workshop_ajax_handle_function() {
     $model->email = sanitize_text_field($_POST['email']);
     $model->questions = $questionsList;
     $model->price = $_POST['price'];
+    $model->authority = $authority;
     $model->status = 0;
     $model->save(); 
+    
+    wp_send_json_success($response);
+    // wp_send_json_success( $response, 200 );
+    // wp_send_json_error();
+    // wp_send_json($response);
+    // wp_die();
 
-    // Include codes from in snippets folder
-    send_mail($_POST['email'], $_POST['fullName']);
-    send_sms($_POST['tel'], $_POST['fullName']);
-    $test = zarin_gate();
-
-    $response = array(
-        'success'   => 'درخواست با موفقیت ارسال شد',
-        'message'   => $test
-    );
-
-    wp_send_json_success( $response, 200 );
-    wp_send_json_error();
-    wp_die();
+    // send_mail($_POST['email'], $_POST['fullName']);
+    // send_sms($_POST['tel'], $_POST['fullName']);
 
 }
 add_action( 'wp_ajax_nopriv_workshop_ajax_handle', 'workshop_ajax_handle_function' );
