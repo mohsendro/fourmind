@@ -11,20 +11,9 @@
     ];
     $reservation = $reservation->first()->where($where_reservation)->orderBy('id', 'DESC')->get();
     $verify = zarin_verify($reservation->price);
-
+    
     if( $verify == 100 || $verify == 101 ) {
-
-        if( $verify == 100 ) {
-            $update_model = $update_model->first()->where('ID', '=', $reservation->ID);
-            $data = [
-                'status' => 1
-            ];
-            tr_query()->table('fm_workshops')->setIdColumn('ID')->findById(145)->update($data);
-
-            send_mail($reservation->email, $reservation->full_name);
-            send_sms($reservation->tel, $reservation->full_name);
-        }
-
+      
         $workshop = new \App\Models\Workshop;
         $where_workshop = [
             [
@@ -34,6 +23,16 @@
             ]
         ];
         $workshop = $workshop->findById($reservation->course_id)->with('meta')->where($where_workshop)->get();
+
+        if( $verify == 100 ) {
+            $data = [
+                'status' => 1
+            ];
+            tr_query()->table('fm_workshops')->findById(intval($reservation->ID))->update($data);
+            
+            send_sms($reservation->tel, $reservation->full_name, $workshop->post_title, $workshop->meta->workshopInfo['date']);
+            send_mail($reservation->email, $reservation->full_name, $workshop->post_title, $workshop->meta->workshopInfo['date']);
+        }
 
     } else {
 

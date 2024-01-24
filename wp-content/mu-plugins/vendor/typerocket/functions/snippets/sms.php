@@ -6,18 +6,20 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 // use Kavenegar\Exceptions\ApiException;
 // use Kavenegar\Exceptions\HttpException;
 
-function send_sms($tel, $full_name) {
+function send_sms($tel, $full_name, $course, $date) {
 
     // create a new cURL resource
     $api = "624D7731383332522B43433068434B49352B4678522B364B4D77496263394577776962714E5A45425674343D";
     $receptor = $tel;
     $token = $full_name;
+    $token2 = $course;
+    $token3 = $date;
     $template = "Welcome";
     // $input_data = array('tracking-code' => '1054 4-41', 'name' => 'پنل');
     $ch = curl_init();
 
     // set URL and other appropriate options
-    curl_setopt($ch, CURLOPT_URL, "https://api.kavenegar.com/v1/".$api."/verify/lookup.json?receptor=".$receptor."&token=".$token."&template=".$template);
+    curl_setopt($ch, CURLOPT_URL, "https://api.kavenegar.com/v1/".$api."/verify/lookup.json?receptor=".$receptor."&token=".$token."&token2=".$token2."&token3=".$token3."&template=".$template);
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     // curl_setopt($handler, CURLOPT_CUSTOMREQUEST, 'POST');

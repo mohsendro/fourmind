@@ -688,6 +688,7 @@ body {
 
 .fourmind-form input,
 .fourmind-form textarea {
+    min-height: 40px;
     font-size: 12px;
     font-weight: 300;
     line-height: 25px;
@@ -696,7 +697,7 @@ body {
     background-color: #ffffff20;
     border: 1px solid #FFFFFF10;
     border-radius: 8px;
-    padding: 10px 20px;
+    padding: 0px 20px;
 }
 
 .fourmind-form input:focus,
@@ -913,6 +914,8 @@ body {
 .end-message .course-date {
     color: #D6FF93;
 }
+
+.persuasion {}
 
 .form-btn {
     width: 100%;

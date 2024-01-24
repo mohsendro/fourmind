@@ -87,6 +87,12 @@ class ReservationController extends WPPostController
                     'operator' => '=',
                     'value'    =>  $_GET['post']
                 ],
+                'AND',
+                [
+                    'column'   => 'status',
+                    'operator' => '=',
+                    'value'    => 1
+                ]
             ];
 
             $workshops = Reservation::new()->findAll()->where($where_search)->select('id')->orderBy('ID', 'DESC')->get();

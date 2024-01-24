@@ -41,6 +41,14 @@
             'value'    => $workshop->ID
 
         ],
+        'AND',
+        [
+            'column'   => 'status',
+
+            'operator' => '=',
+
+            'value'    => 1
+        ]
 
     ];
 
@@ -70,6 +78,7 @@
                 $post_thumbnail_attr = array(
                     'data-bs-toggle' => 'modal',
                     'data-bs-target' => '#videoPopup' . $workshop->ID,
+                    'onclick' => "pauseVideo(" . $workshop->ID . ");",
                 );
             ?>
 
@@ -93,7 +102,7 @@
 
             <ul class="details">
 
-                <li>
+                <!-- <li>
 
                     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -107,11 +116,11 @@
 
                     </svg>
 
-                    <strong>ظرفیت:</strong>
+                    <strong>ظرفیت باقیمانده:</strong>
 
-                    <span><?php echo $workshop->meta->workshopInfo['capacity']; ?> نفر | باقیمانده: <?php echo $workshop->meta->workshopInfo['capacity'] - count($workshops_reserve); ?></span>
+                    <span><?php //echo $workshop->meta->workshopInfo['capacity'] - count($workshops_reserve); ?> نفر</span>
 
-                </li>
+                </li> -->
 
                 <li>
 
@@ -203,7 +212,7 @@
 
                 ?>
 
-                <button class="btn btn-introduce <?php echo $disable; ?>" data-bs-toggle="modal" data-bs-target="#videoPopup<?php echo $workshop->ID; ?>">ویدئو معرفی</button>
+                <button class="btn btn-introduce <?php echo $disable; ?>" data-bs-toggle="modal" data-bs-target="#videoPopup<?php echo $workshop->ID; ?>" onclick="pauseVideo(<?php echo $workshop->ID; ?>);">ویدئو معرفی</button>
 
                 <button class="btn btn-register" 
                     data-courseID = "<?php echo $workshop->ID; ?>" 
@@ -220,40 +229,37 @@
 
         </div>
 
-    </div>
-
-
-
-    <!-- Modal -->
-
-    <?php if( isset($workshop->meta->workshopInfo['video']) ): ?>
-
-    <div class="modal fade" id="videoPopup<?php echo $workshop->ID; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-
-        <div class="modal-dialog modal-dialog-centered">
-
-            <div class="modal-content">
-
-                <div class="modal-header">
-
-                    <?php echo $workshop->post_title; ?>
-
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
+        <!-- Modal -->
+        <?php if( isset($workshop->meta->workshopInfo['video']) ): ?>
+            <div class="modal fade videoPopupItem" id="videoPopup<?php echo $workshop->ID; ?>" date-popupNumber="<?php echo $workshop->ID; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <?php echo $workshop->post_title; ?>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeVideo(<?php echo $workshop->ID; ?>);"></button>
+                        </div>
+                        <div class="modal-body">
+                            <?php if( has_post_thumbnail($workshop->ID) ): ?>
+                                <video class="embed-responsive-item" data-videoID="video<?php echo $workshop->ID; ?>"
+                                    loop controls src="<?php echo $workshop->meta->workshopInfo['video']["url"]; ?>" 
+                                    poster="<?php echo get_the_post_thumbnail_url($workshop->ID); ?>"
+                                    type="video/mp4" width="100%" height="auto"
+                                >
+                                </video>
+                            <?php else: ?>
+                                    <video class="embed-responsive-item" data-videoID="video<?php echo $workshop->ID; ?>"
+                                        loop controls src="<?php echo $workshop->meta->workshopInfo['video']["url"]; ?>" 
+                                        poster="<?php echo TYPEROCKET_DIR_URL; ?>/resources/assets/img/card.png"
+                                        type="video/mp4" width="100%" height="auto"
+                                    >
+                                    </video>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="modal-body">
-
-                    <video class="embed-responsive-item" muted loop controls src="<?php echo $workshop->meta->workshopInfo['video']["url"]; ?>" type="video/mp4" width="100%" height="auto"></video>
-
-                </div>
-
             </div>
-
-        </div>
+        <?php endif; ?>
 
     </div>
-
-    <?php endif; ?>
 
 <?php endif; ?>

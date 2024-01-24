@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
-function send_mail($mail, $full_name) {
+function send_mail($mail, $full_name, $course, $date) {
 
     global $phpmailer;
 
@@ -38,7 +38,7 @@ function send_mail($mail, $full_name) {
     $phpmailer->Subject = 'Welcome To Fourmind';
 
     // Email body content
-    $mailContent = $full_name . ' عزیز، کارگاه شما با موفقیت رزرو شد';
+    $mailContent = $full_name . ' عزیز' . "<br>" . 'ثبت نام شما در کارگاه آموزشی ' . $course . ' در تاریخ ' . $date . ' انجام شد.' . "<br>" . 'محل برگزاری کارگاه متعاقباً اطلاع رسانی خواهد شد.' . "<br>" . 'فورمایند آکادمی' . "<br>" . "https://academy.fourmind.co/";
     $phpmailer->Body = $mailContent;
 
     if(!$phpmailer->send()){

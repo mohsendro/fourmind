@@ -2,10 +2,6 @@
 
 <?php get_header(); ?>
 
-<video autoplay muted loop class="fourmind-back">
-    <source src="<?php echo TYPEROCKET_DIR_URL . '/resources/assets/video/bg.mp4'; ?>" type="video/mp4">
-</video>
-
 <!-- Fourmind Start -->
 <section id="fourmind" class="container-fluid fourmind">
     <div class="container">

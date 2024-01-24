@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6266e3085f5d400e08e4d056d8187878",
+    "content-hash": "7d3dfc56fe45c88729b208d3d0ec9733",
     "packages": [
         {
             "name": "kavenegar/php",
@@ -51,6 +51,47 @@
                 "source": "https://github.com/kavenegar/kavenegar-php/tree/master"
             },
             "time": "2019-02-26T12:49:19+00:00"
+        },
+        {
+            "name": "sujan/php-csv-exporter",
+            "version": "v2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sujancse/php-csv-exporter.git",
+                "reference": "6ea91b1782527acfe17e14c0e4c27542f0a7efc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sujancse/php-csv-exporter/zipball/6ea91b1782527acfe17e14c0e4c27542f0a7efc2",
+                "reference": "6ea91b1782527acfe17e14c0e4c27542f0a7efc2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sujan\\Exporter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sujan Mahmud",
+                    "email": "sujancseruet@gmail.com"
+                }
+            ],
+            "description": "A PHP library to export data to CSV",
+            "support": {
+                "issues": "https://github.com/sujancse/php-csv-exporter/issues",
+                "source": "https://github.com/sujancse/php-csv-exporter/tree/v2.1.2"
+            },
+            "time": "2022-10-31T08:05:58+00:00"
         }
     ],
     "packages-dev": [],

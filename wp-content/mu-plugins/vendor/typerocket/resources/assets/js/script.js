@@ -558,3 +558,32 @@ let rangeCallback = (event) => {
     price.innerHTML = ToRial(rangeValue) + " تومان";
 
 }
+
+
+// Pause Video On Closed Popup
+let closeVideo = (number) => {
+
+    var videoNumber = document.querySelector('[data-videoID="video'+number+'"]');
+    videoNumber.pause();
+
+}
+
+let pauseVideo = (number) => {
+
+    var videoAll = document.getElementsByClassName('embed-responsive-item');
+    var popupAll = document.getElementsByClassName("videoPopupItem");
+
+    for (let j = 0; j < popupAll.length; j++) {
+        const item = popupAll[j];
+        if( item.getAttribute('date-popupNumber') != number ) {
+            item.classList.remove('show');
+            item.style.display = 'none';
+        }
+    }
+
+    for (let i = 0; i < videoAll.length; i++) {
+        const element = videoAll[i];
+        element.pause();
+    }
+    
+}

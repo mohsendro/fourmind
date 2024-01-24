@@ -20,3 +20,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('body'); ?> >
+
+<video autoplay loop muted playsinline class="fourmind-back">
+    <source src="<?php echo TYPEROCKET_DIR_URL . '/resources/assets/video/bg.mp4'; ?>" type="video/mp4">
+</video>

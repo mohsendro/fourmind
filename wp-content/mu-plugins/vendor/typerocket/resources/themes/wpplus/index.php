@@ -27,10 +27,6 @@
     $workshops = $workshop->findAll()->with('meta')->where($where_workshop)->orderBy('id', 'DESC')->get();
 ?> 
 
-<video autoplay muted loop class="fourmind-back">
-    <source src="<?php echo TYPEROCKET_DIR_URL . '/resources/assets/video/bg.mp4'; ?>" type="video/mp4">
-</video>
-
 <!-- Fourmind Start -->
 <section id="fourmind" class="container-fluid fourmind">
     <div class="container">
@@ -47,7 +43,7 @@
 
                                 <h2 class="primary-desc">
 
-                                    مهمترین تصمیمات زندگیِ شخصی و کاریِ تو، ربطی به چیزهایی که میدونی نداره. ربط به نحوه ی فکر کردنت داره. اینکه در لحظه چطور کنترل افکار و احساساتت رو داری انتخاب های آگاهانه ی تو رو مشخص میکنه.
+                                    مهمترین تصمیمات زندگیِ شخصی و کاریِ تو، ربطی به چیزهایی که میدونی نداره. ربط به نحوه ی فکر کردنت داره. اینکه در لحظه چطور کنترل افکار و احساساتت رو داری، انتخاب های آگاهانه ی تو رو مشخص میکنه.
 
                                 </h2>
 
@@ -226,9 +222,7 @@
                                                 </div>
 
                                                 <label for="tel">تلفن تماس<span class="star">*</span></label>
-
                                                 <input type="text" name="tel" id="tel" class="form-control tel" require>
-
                                             </div>
 
                                         </div>
@@ -250,9 +244,7 @@
                                                 </div>
 
                                                 <label for="email">ایمیل<span class="star">*</span></label>
-
                                                 <input type="text" name="email" id="email" class="form-control email" require>
-
                                             </div>
 
                                         </div>
@@ -439,19 +431,21 @@
 
                                         <ul>
 
-                                            <li>گر بیشتر از ارزش دوره پرداخت کنی در دوره‌های بعد احتمالا شرکت نمی‌کنی.</li>
+                                            <li>اگر بیشتر از ارزش دوره پرداخت کنی در دوره‌های بعد احتمالا شرکت نمی‌کنی.</li>
 
                                             <li>اگر کمتر از ارزش دوره پرداخت کنی این دوره پایدار نخواهد موند.</li>
 
                                             <li>اگر الان در وضعیت مالی خوبی نیستی، نگران نباش، یکی بیشتر پرداخت‌ خواهد کرد که تو بتونی بیای.</li>
 
-                                            <li>گر الان در وضعیت مالی خوبی هستی، می‌تونی بیشتر پرداخت کنی تا دیگران هم فرصت داشته باشه بیاد.</li>
+                                            <li>اگر الان در وضعیت مالی خوبی هستی، می‌تونی بیشتر پرداخت کنی تا دیگران هم فرصت داشته باشه، بیاد.</li>
 
                                         </ul>
 
                                     </div>
 
                                 </div>
+
+                                <div class="persuasion">این دوره برای تو چقدر ارزش داره؟</div>
 
                                 <form method="get" class="fourmind-form form-step-six">
 
@@ -467,11 +461,11 @@
 
                                                         هزینه کارگاه رو خودت انتخاب کن
 
-                                                        <svg width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <!-- <svg width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                                                             <path d="M15.2501 20.4201L8.73009 13.9001C7.96009 13.1301 7.96009 11.8701 8.73009 11.1001L15.2501 4.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 
-                                                        </svg>
+                                                        </svg> -->
 
                                                     </label>
 

@@ -8,7 +8,8 @@
         }
     ],
     "require": {
-        "kavenegar/php": "*"
+        "kavenegar/php": "*",
+        "sujan/php-csv-exporter": "^2.1"
     },
     "autoload": {
         "psr-4": {
