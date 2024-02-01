@@ -1,22 +1,5 @@
 /* Register Font Family */
 @font-face {
-    font-family: "iransans";
-    src: url('../font/iransans.eot');
-    /* IE9 Compat Modes */
-    src: url('../font/iransans.eot?#iefix') format('embedded-opentype'),
-        /* IE6-IE8 */
-        url('../font/iransans.woff2') format('woff2'),
-        /* Super Modern Browsers */
-        url('../font/iransans.woff') format('woff'),
-        /* Pretty Modern Browsers */
-        url('../font/iransansr.ttf') format('truetype'),
-        /* Safari, Android, iOS */
-        url('../font/iransans.svg#svgFontName') format('svg');
-    /* Legacy iOS */
-    font-weight: 200;
-}
-
-@font-face {
     font-family: "ravi";
     src: url('../font/ravi/Webfonts/fonts/woff2/Ravi-Thin.woff2') format('woff2'),
         /* Super Modern Browsers */
@@ -79,6 +62,14 @@
         url('../font/ravi/Webfonts/fonts/woff/Ravi-ExtraBlack.woff') format('woff');
         /* Pretty Modern Browsers */
     font-weight: 900;
+}
+@font-face {
+    font-family: "ravi-vf";
+    src: url('../font/ravi-vf/RaviVF-Thin.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/ravi-vf/RaviVF-Thin.woff') format('woff');
+        /* Pretty Modern Browsers */
+    font-weight: 100 200 300 400 500 600 700 800 900;
 }
 
 /* Kit Styles */

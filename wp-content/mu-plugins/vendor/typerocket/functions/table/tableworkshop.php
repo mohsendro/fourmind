@@ -13,6 +13,7 @@ function table_workshop_list_table_init() {
     echo "<div class='wrap'>";
       echo "<h1 class='wp-heading-inline'>رزرو کارگاه‌ها</h1>";
       echo "<hr class='wp-header-end'>";
+      echo "<a href=". add_query_arg('action', 'download_csv_file') ." class='button button-primary button-large'>خروجی اکسل</a>";
           // Prepare table
           $tableWorkshop->prepare_items();
           echo "<form method='get'>";

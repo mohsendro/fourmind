@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Ravi VF';
+    src: url('RaviVF-Thin.eot');
+    src: url('RaviVF-Thin.eot?#iefix') format('embedded-opentype'),
+        url('RaviVF-Thin.woff2') format('woff2'),
+        url('RaviVF-Thin.woff') format('woff'),
+        url('RaviVF-Thin.ttf') format('truetype'),
+        url('RaviVF-Thin.svg#RaviVF-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
