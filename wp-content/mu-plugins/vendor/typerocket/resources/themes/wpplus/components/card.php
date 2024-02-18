@@ -13,6 +13,7 @@
         }
         $sep++;
     }
+
     $workshopReserve = new \App\Models\Reservation;
     $where_search = [
         [
@@ -33,9 +34,12 @@
     } else {
         $workshops_reserve = [];
     }
+
+    $current_date = strtotime( date("m/d/Y", time()) );
+    $course_finished_date = strtotime( $workshop->meta->workshopInfo['finished-date'] );
 ?>
 
-<?php if( $workshop->meta->workshopInfo['capacity'] > count($workshops_reserve) ): ?>
+<?php if( $workshop->meta->workshopInfo['capacity'] > count($workshops_reserve) && ($course_finished_date - $current_date) >= 0 ): ?>
     <div class="swiper-slide card-slide">
         <?php if( has_post_thumbnail($workshop->ID) ): ?>
             <?php

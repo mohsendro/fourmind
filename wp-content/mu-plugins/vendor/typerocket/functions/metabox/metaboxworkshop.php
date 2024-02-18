@@ -50,6 +50,23 @@ if( class_exists( 'CSF' ) ) {
                 'type'  => 'text',
                 'title' => 'تاریخ دوره',
             ),
+
+            array(
+                'id'       => 'finished-date',
+                'type'     => 'date',
+                'title'    => 'تاریخ اتمام دوره',
+                'desc'     => 'تاریخ باید به میلادی وارد شود',
+                'settings' => array(
+                  'dateFormat'      => 'yy/mm/dd',
+                  'changeMonth'     => true,
+                  'changeYear'      => true,
+                  'showWeek'        => false,
+                  'showButtonPanel' => true,
+                  'weekHeader'      => 'روز',
+                  'monthNamesShort' => array( 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ),
+                  'dayNamesMin'     => array( 'یکشنبه', 'دوشنبه', 'سه‌شنبه', 'چهارشنبه', 'پنجشنبه', 'جمعه', 'شنبه' ),
+                )
+            ),
               
             array(
                 'id'    => 'time',
@@ -131,7 +148,7 @@ if( class_exists( 'CSF' ) ) {
                   ),
                 ),
                 
-              ),              
+            ),              
 
         )
     ) );
